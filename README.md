@@ -1,4 +1,4 @@
-# Tacos Sinaloa Y Carniceria — Production v6.8.1
+# Tacos Sinaloa Y Carniceria — Production v6.9
 
 Permanent production deployment for the audited charcoal/gold Tacos Sinaloa site.
 
@@ -45,6 +45,11 @@ https://tacos.pilotsalesdistribution.com/
 ## Verification
 
 - permanent HTTPS returns 200 through Cloudflare
+- robots.txt and sitemap.xml return HTTP 200
+- conventional favicon and web manifest return HTTP 200
+- CSP / HSTS / nosniff / frame / referrer / permissions headers verified through Cloudflare
+- Cloudflare Insights remains permitted by a narrow CSP allowlist
+- mobile performance remains ~2.0 s LCP with CLS 0 after hardening
 - Open Graph image returns 200
 - 390 / 768 / 1024 / 1440 production browser gauntlet passes
 - zero browser errors / failed requests
@@ -60,3 +65,4 @@ https://tacos.pilotsalesdistribution.com/
 - charcoal-v6.7-reduced
 - charcoal-v6.8-gallery
 - charcoal-v6.8.1-production
+- charcoal-v6.9-production
