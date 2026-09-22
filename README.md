@@ -1,45 +1,34 @@
-# Tacos Sinaloa Y Carniceria — Reduced Final v6.7
+# Tacos Sinaloa Y Carniceria — Place Gallery v6.8
 
-Final reduction pass over the audited charcoal/gold presentation.
+Charcoal/gold presentation with a compact physical-place gallery added above Visit.
 
-## What changed from v6.6.1
-- hero and Taquería/Carnicería selector markup frozen
-- full Menu section replaced by a compact four-item availability treatment
-- full Yelp section replaced by a compact trust/action strip
-- meaningful utility microcopy raised to a 10px minimum
-- default Taquería image loads eagerly at low fetch priority; Carnicería image remains lazy
-- mobile selector/facts/footer spacing tightened
-- tablet-only spacing tightened without changing mobile/desktop composition
+## v6.8 addition
+- one exact-address Valley Blvd storefront image used as the large anchor
+- storefront explicitly labeled Prior signage / Letrero anterior
+- two supporting current-listing images: prepared food + carnicería
+- compact three-image editorial layout; no new long-form copy
+- gallery remains bilingual and reduced-motion safe
 
-## Measured result
-- desktop page height: 3545px
-- mobile page height: 3652px
-- 768px tablet page height: 3880px
-- 1024px tablet page height: 3634px
+## Gallery layout
+- desktop: one wide storefront card + two stacked supporting cards
+- mobile: storefront spans full width + two supporting cards beneath
+- all images lazy-load in the lower-page gallery
+- captions use the existing charcoal / antique-gold system
 
-## Preserved verified business information
-- Tacos Sinaloa Y Carniceria
-- 17294 Valley Blvd, Ste A, Fontana, CA 92335
-- (909) 823-6253
-- 8:00 AM–8:00 PM daily
-- tacos / birria / menudo
-- dine-in / takeout
+## Important photo note
+The storefront image depicts prior Taqueria San Miguel signage at the same 17294 Valley Blvd location. The site states this explicitly. Public-preview usage should still be followed by owner/licensing approval before a commercial production launch.
 
-## Release verification
+## Verification
+- hosted HTTP 200
 - 390 / 768 / 1024 / 1440: no horizontal overflow
-- zero browser page errors
-- zero failed requests / 4xx / 5xx local requests
-- semantic keyboard tabs verified
-- both selector images verified
-- EN/ES + live status verified
-- reduced motion verified
-- mobile CTA timing verified
-- meaningful utility type floor verified at 10px
+- gallery image count = 3
+- all gallery images load after the section enters view
+- prior-signage disclosure verified in English and Spanish
+- exact Suite A business information preserved
+- zero page errors / failed requests / bad local responses
+- reduced-motion content remains fully visible
 
 ## Preserved releases
-- green-v6.3
-- charcoal-v6.4
-- charcoal-v6.5.2
-- charcoal-v6.6-final
 - charcoal-v6.6.1-audited
 - charcoal-v6.7-reduced
+- charcoal-v6.8-gallery
