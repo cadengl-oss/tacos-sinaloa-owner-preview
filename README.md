@@ -1,28 +1,33 @@
-# Tacos Sinaloa y Carnicería — Owner Preview v5.2.2
+# Tacos Sinaloa y Carnicería — Owner Preview v6
 
-Identity-finished visual candidate.
+Luxury-minimal green + gold direction.
 
-## Locked art direction
-- deep-green Muchacha-inspired brand hero
-- one canonical minimal Taco Mark reused across the site
+## Locked direction
+- forest-green and antique-gold UI only
+- custom professional taco emblem
 - Bodoni Moda + Manrope local typography
-- kitchen + carnicería dual-story composition
-- restrained editorial menu
-- integrated carnicería image/mark
-- responsive light/dark navigation
-- understated mobile conversion control
-- dedicated favicon, Apple touch icon, and 1200×630 social card
+- restrained Rolex-inspired spacing and hierarchy
+- small editorial restaurant-photo accents
+- simplified menu rows and text CTAs
+- Yelp, Call, and Directions links
+- no embedded map
+- EN/ES toggle
+- mobile / tablet / desktop responsive layout
+- custom favicon, Apple icon, and social-share image
+
+## Verified public business details
+- Tacos Sinaloa y Carnicería
+- 17294 Valley Blvd, Fontana, CA 92335
+- (909) 823-6253
+- 8 AM–8 PM daily
+- menu highlights used conservatively: tacos, birria, menudo, today's menu
 
 ## Verification
-- 390px mobile: no horizontal overflow
-- 1024px tablet: no horizontal overflow
-- 1440px desktop: no horizontal overflow
-- EN/ES verified
-- navigation contrast verified against actual background
-- keyboard skip-link verified
-- reduced-motion verified
-- canonical Taco Mark rendered from one shared SVG symbol
-- favicon / Apple icon / social image return HTTP 200
-- local imagery and fonts only
-
-GitHub is source control while Actions/Pages billing is paused. The owner preview is currently served through the PSE Cloudflare tunnel.
+- 390px mobile: no overflow
+- 1024px tablet: no overflow
+- 1440px desktop: no overflow
+- Yelp links present
+- EN/ES toggle verified
+- green/gold identity verified
+- editorial photos intentionally capped small
+- local fonts / local site imagery
