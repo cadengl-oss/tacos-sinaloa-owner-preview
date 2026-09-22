@@ -1,4 +1,4 @@
-# Tacos Sinaloa Y Carniceria — Production v6.9.1
+# Tacos Sinaloa Y Carniceria — Production v6.10
 
 Permanent production deployment for the audited charcoal/gold Tacos Sinaloa site.
 
@@ -51,6 +51,14 @@ https://tacos.pilotsalesdistribution.com/
 - owner content gate prevents unverified scraped menu prices, reviews, ordering URLs, parking, or holiday-hour claims from reaching production
 - menu owner template is ready for current approved categories, descriptions, prices, and availability
 
+## Content-driven menu — v6.10
+
+- production menu highlights are sourced from `content/menu.json` with the existing HTML retained as a failure-safe fallback
+- EN/ES menu labels render from the same content source
+- menu JSON is explicitly no-cache so approved edits propagate promptly
+- `tools/validate-menu.py` rejects duplicate/malformed items and blocks prices unless `_owner_approved` is explicitly true
+- current production content remains the same four no-price highlights; no third-party prices were promoted
+
 ## Verification
 
 - permanent HTTPS returns 200 through Cloudflare
@@ -76,3 +84,4 @@ https://tacos.pilotsalesdistribution.com/
 - charcoal-v6.8.1-production
 - charcoal-v6.9-production
 - charcoal-v6.9.1-production
+- charcoal-v6.10-production
