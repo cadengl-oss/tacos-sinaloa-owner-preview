@@ -1,53 +1,40 @@
-# Tacos Sinaloa y Carnicería — Final Presentation v6.6
+# Tacos Sinaloa Y Carniceria — Audited Final v6.6.1
 
-Presentation-ready charcoal + antique-gold website candidate.
+Final charcoal/gold presentation with a fresh public-information accuracy audit.
 
-## Final art direction
-- charcoal field with antique-gold identity system
-- custom Taco Mark with line-draw entrance
-- Newsreader display typography + Instrument Sans utility typography
-- single filled Directions CTA; Call and Yelp remain outlined
-- restrained hero side-notes and diamond divider
-- tighter section rhythm and calmer menu scale
-- refined selector image crops and responsive image viewport
+## Verified public business information
+- Public business name: Tacos Sinaloa Y Carniceria
+- Address: 17294 Valley Blvd, Ste A, Fontana, CA 92335
+- Phone: (909) 823-6253
+- Regular listed hours: 8:00 AM–8:00 PM daily
+- Current public specialties/listings support: tacos, birria, menudo
+- Current public listing supports: dine-in and takeout
+- Taquería + carnicería / meat-market concept is publicly supported
 
-## Utility
-- semantic Taquería / Carnicería selector
-- one active editorial image at a time
-- live OPEN/CLOSED status in America/Los_Angeles
-- Dine-in / Takeout service note
-- direct Call / Directions / Yelp actions
-- Yelp reviews and customer-photo trust block
-- English / Spanish UI
-
-## Accessibility and motion
-- keyboard tabs: Left / Right / Home / End
-- proper aria-selected / tabpanel relationships
-- live status role + aria-live
-- language-aware tablist labeling
-- reduced-motion disables logo/panel motion and leaves all content visible
-- no scroll hijacking or infinite decorative animation
-
-## Presentation / performance hardening
-- local font preloads
-- stable image dimensions + explicit responsive crop viewport
-- async image decoding and lazy loading for selector photography
-- 1200x630 social card with OG dimension and alt metadata
-- status refreshes on focus and app visibility restore
-- no missing local asset references
+## Accuracy corrections from v6.6
+- added Suite A everywhere customer-facing and in structured data
+- changed metadata/schema business name to the exact public spelling
+- removed DESDE SINALOA origin wording
+- replaced unverified quality/tradition side claims with factual Taquería/Carnicería in Fontana labels
+- replaced Call kitchen / Call counter with neutral Call restaurant wording
+- replaced Availability changes daily with Call to confirm today's menu and availability
+- directions links now include Suite A
+- structured data simplified to standard Restaurant type with conservative restaurant/carnicería description
+- refreshed 1200x630 social card after corrections
 
 ## Final verification
-- hosted HTTP 200
-- 390 / 768 / 1024 / 1440: no horizontal overflow
-- zero browser page errors
-- zero failed requests / 4xx / 5xx local asset requests
-- both selector images verified after lazy load
-- EN/ES and live status verified
-- mobile sticky CTA hidden on hero, shown after hero
-- reduced-motion verified
+- source accuracy assertions pass
+- hosted browser accuracy pass: 390 / 768 / 1024 / 1440
+- no horizontal overflow
+- no browser page errors
+- both selector images load after their tabs are activated
+- exact Suite A address verified in hero, facts, visit, map links, and JSON-LD
+- English / Spanish CTA and service wording verified
+- menu highlights limited to publicly supported tacos, birria, menudo
 
-## Preserved branches
+## Preserved releases
 - green-v6.3
 - charcoal-v6.4
 - charcoal-v6.5.2
 - charcoal-v6.6-final
+- charcoal-v6.6.1-audited
