@@ -1,26 +1,31 @@
-# Tacos Sinaloa y Carnicería — Owner Preview v6.1.1
+# Tacos Sinaloa y Carnicería — Owner Preview v6.2
 
-Typography-tightened luxury-minimal candidate.
+Professional logo + motion refinement.
 
-## Direction
+## Identity
+- more taco-explicit custom Taco Mark with open shell and layered filling edge
 - forest green + antique gold only
-- custom taco emblem
-- Newsreader for brand and major display headings only
-- Instrument Sans for navigation, facts, body copy, and menu rows
-- reduced display scale and tracking
-- literal section naming instead of slogan-heavy copy
-- tighter vertical rhythm
+- Newsreader + Instrument Sans typography
 - small editorial food photography
 - Yelp, Call, and Directions actions
-- mobile CTA hidden during hero, revealed after first scroll
+
+## Motion
+- sequenced hero entrance
+- subtle hero drift/scale on scroll
+- masked photo reveals with tiny image settle
+- gold section-rule draw
+- restrained menu text movement
+- no smooth-scroll hijacking
+- no infinite decorative animation
+- reduced-motion opt-out
+- visibility fallback after 1.8s
 
 ## Verification
-- 390px mobile: no horizontal overflow
-- 1024px tablet: no horizontal overflow
-- 1440px desktop: no horizontal overflow
-- computed font family checks pass
+- 390px mobile / 1024px tablet / 1440px desktop: no overflow
+- hosted motion state verified
+- no page errors
+- all reveal content forced visible after fallback
+- reduced-motion leaves all content visible
 - EN/ES verified
 - Yelp links verified
-- mobile action bar behavior verified
-- green/gold-only UI tokens
-- local fonts, favicon, Apple icon, social image
+- favicon, Apple icon, and social image updated to v6.2 mark

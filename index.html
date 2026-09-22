@@ -22,12 +22,12 @@
 
 <svg class="svg-defs" width="0" height="0" aria-hidden="true">
   <defs>
-    <symbol id="luxuryTacoMark" viewBox="0 0 480 320">
-      <path class="logo-shell" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M86 244C70 213 72 174 87 139C111 84 164 52 222 52C243 52 263 56 281 65C307 60 336 66 360 81C401 106 425 154 421 199C418 232 397 251 363 256L126 274C108 275 95 264 86 244Z"/>
-      <path class="logo-face" fill="none" stroke="currentColor" stroke-width="5.3" stroke-linecap="round" stroke-linejoin="round" d="M136 262C163 211 190 147 235 105C274 69 330 75 368 110C399 140 411 179 404 211C400 231 385 245 361 249L136 270"/>
-      <path class="logo-fill" fill="none" stroke="currentColor" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" d="M97 139C112 128 123 113 137 101C151 90 168 91 181 101C193 111 205 109 218 98C232 86 249 84 264 94"/>
-      <path class="logo-fill" fill="none" stroke="currentColor" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" d="M104 165C118 153 132 147 147 149C160 151 168 162 182 163C196 164 207 153 219 148"/>
-      <path class="logo-fill" fill="none" stroke="currentColor" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" d="M114 190C125 179 136 178 145 187C153 195 164 195 173 187"/>
+    <symbol id="luxuryTacoMarkV62" viewBox="0 0 480 320">
+      <path class="logo-shell" fill="none" stroke="currentColor" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round" d="M80 248C69 218 73 177 94 137C122 82 171 51 229 51C252 51 274 56 294 67C334 61 376 78 402 112C431 149 439 197 418 229C408 245 390 253 365 256L122 275C101 277 86 267 80 248Z"/>
+      <path class="logo-face" fill="none" stroke="currentColor" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round" d="M138 264C157 224 181 178 212 139C247 96 283 77 320 81C360 85 391 110 408 145C424 179 425 212 411 232C402 245 385 250 362 253L138 270"/>
+      <path class="logo-fill" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" d="M96 133C111 115 126 103 141 101C155 99 164 108 176 113C190 119 201 116 212 105"/>
+      <path class="logo-fill" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" d="M106 158C120 146 132 142 144 147C156 152 163 162 176 164C189 166 199 157 209 149"/>
+      <path class="logo-fill" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" d="M114 183C124 173 134 171 143 178C151 184 160 184 168 177"/>
     </symbol>
   </defs>
 </svg>
@@ -44,85 +44,87 @@
 
 <main id="main">
   <section class="hero" id="top">
-    <div class="hero-eyebrow">TAQUERÍA · CARNICERÍA · FONTANA</div>
-    <svg class="luxury-taco-mark" viewBox="0 0 480 320" role="img" aria-label="Tacos Sinaloa taco emblem"><use href="#luxuryTacoMark"/></svg>
-    <h1>Tacos Sinaloa</h1>
-    <p class="hero-location">17294 VALLEY BLVD · FONTANA, CA · OPEN DAILY 8—8</p>
-    <div class="hero-actions">
-      <a href="tel:+19098236253" data-i18n="call_now">Call now ↗</a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=17294+Valley+Blvd,+Fontana,+CA+92335" target="_blank" rel="noreferrer" data-i18n="directions">Directions ↗</a>
-      <a href="https://www.yelp.com/search?find_desc=Tacos%20Sinaloa%20Y%20Carniceria&find_loc=17294%20Valley%20Blvd%2C%20Fontana%2C%20CA%2092335" target="_blank" rel="noreferrer">Yelp ↗</a>
+    <div class="hero-core">
+      <div class="hero-eyebrow">TAQUERÍA · CARNICERÍA · FONTANA</div>
+      <svg class="luxury-taco-mark" viewBox="0 0 480 320" role="img" aria-label="Tacos Sinaloa taco emblem"><use href="#luxuryTacoMarkV62"/></svg>
+      <h1>Tacos Sinaloa</h1>
+      <p class="hero-location">17294 VALLEY BLVD · FONTANA, CA · OPEN DAILY 8—8</p>
+      <div class="hero-actions">
+        <a href="tel:+19098236253" data-i18n="call_now">Call now ↗</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=17294+Valley+Blvd,+Fontana,+CA+92335" target="_blank" rel="noreferrer" data-i18n="directions">Directions ↗</a>
+        <a href="https://www.yelp.com/search?find_desc=Tacos%20Sinaloa%20Y%20Carniceria&find_loc=17294%20Valley%20Blvd%2C%20Fontana%2C%20CA%2092335" target="_blank" rel="noreferrer">Yelp ↗</a>
+      </div>
     </div>
   </section>
 
-  <section class="facts" aria-label="Business information">
-    <div class="fact">
+  <section class="facts" aria-label="Business information" data-motion-section>
+    <div class="fact" data-motion="reveal">
       <span data-i18n="hours">Hours</span>
       <strong>8:00 AM — 8:00 PM</strong>
       <small data-i18n="daily">Monday — Sunday</small>
     </div>
-    <div class="fact">
+    <div class="fact" data-motion="reveal">
       <span data-i18n="location">Location</span>
       <strong>17294 Valley Blvd</strong>
       <small>Fontana, CA 92335</small>
     </div>
-    <div class="fact">
+    <div class="fact" data-motion="reveal">
       <span data-i18n="phone">Phone</span>
       <strong><a href="tel:+19098236253">(909) 823-6253</a></strong>
       <small data-i18n="call_menu">Call for today's menu</small>
     </div>
   </section>
 
-  <section class="intro-section">
-    <div class="section-copy">
+  <section class="intro-section" data-motion-section>
+    <div class="section-copy" data-motion="reveal">
       <span class="eyebrow">TAQUERÍA + CARNICERÍA</span>
       <h2 data-i18n="intro_title">Taquería &amp; Carnicería</h2>
       <p data-i18n="intro_copy">Mexican food from the kitchen and a carnicería counter under one roof on Valley Blvd.</p>
     </div>
     <div class="editorial-gallery" aria-label="Restaurant photography">
-      <figure class="editorial-photo editorial-one">
+      <figure class="editorial-photo editorial-one" data-motion="image">
         <img src="./assets/tacos-hero.jpg" alt="Tacos from the restaurant" loading="lazy" />
         <figcaption>TAQUERÍA / 01</figcaption>
       </figure>
-      <figure class="editorial-photo editorial-two">
+      <figure class="editorial-photo editorial-two" data-motion="image">
         <img src="./assets/carniceria.jpg" alt="Carnicería counter" loading="lazy" />
         <figcaption>CARNICERÍA / 02</figcaption>
       </figure>
-      <figure class="editorial-photo editorial-three">
+      <figure class="editorial-photo editorial-three" data-motion="image">
         <img src="./assets/tacos.jpg" alt="Prepared tacos" loading="lazy" />
         <figcaption>VALLEY BLVD / 03</figcaption>
       </figure>
     </div>
   </section>
 
-  <section class="menu-section" id="menu">
-    <header class="section-heading">
+  <section class="menu-section" id="menu" data-motion-section>
+    <header class="section-heading" data-motion="reveal">
       <span class="eyebrow" data-i18n="kitchen">From the kitchen</span>
       <h2 data-i18n="menu_title">Menu</h2>
       <p data-i18n="menu_note">Public listings consistently mention these favorites. Call to confirm today's preparation and availability.</p>
     </header>
     <div class="menu-list">
-      <a class="menu-row" href="tel:+19098236253"><span>01</span><strong>Tacos</strong></a>
-      <a class="menu-row" href="tel:+19098236253"><span>02</span><strong>Birria</strong></a>
-      <a class="menu-row" href="tel:+19098236253"><span>03</span><strong>Menudo</strong></a>
-      <a class="menu-row" href="tel:+19098236253"><span>04</span><strong data-i18n="today_menu">Today's Menu</strong></a>
+      <a class="menu-row" data-motion="reveal" href="tel:+19098236253"><span>01</span><strong>Tacos</strong></a>
+      <a class="menu-row" data-motion="reveal" href="tel:+19098236253"><span>02</span><strong>Birria</strong></a>
+      <a class="menu-row" data-motion="reveal" href="tel:+19098236253"><span>03</span><strong>Menudo</strong></a>
+      <a class="menu-row" data-motion="reveal" href="tel:+19098236253"><span>04</span><strong data-i18n="today_menu">Today's Menu</strong></a>
     </div>
   </section>
 
-  <section class="counter-section" id="carniceria">
-    <div class="section-copy">
+  <section class="counter-section" id="carniceria" data-motion-section>
+    <div class="section-copy" data-motion="reveal">
       <span class="eyebrow" data-i18n="counter">From the counter</span>
       <h2 data-i18n="counter_title">Carnicería</h2>
       <p data-i18n="counter_copy">A neighborhood meat counter alongside the taquería. Call or stop in to ask about today's selection.</p>
       <a class="text-link" href="tel:+19098236253" data-i18n="ask_counter">Ask the counter ↗</a>
     </div>
-    <figure class="counter-photo">
+    <figure class="counter-photo" data-motion="image">
       <img src="./assets/carniceria.jpg" alt="Meat counter at Tacos Sinaloa y Carnicería" loading="lazy" />
       <figcaption>CARNICERÍA / FONTANA</figcaption>
     </figure>
   </section>
 
-  <section class="visit-section" id="visit">
+  <section class="visit-section" id="visit" data-motion-section data-motion="reveal">
     <span class="eyebrow" data-i18n="visit">Visit</span>
     <h2 data-i18n="visit_title">Valley Blvd., Fontana</h2>
     <address>Tacos Sinaloa y Carnicería<br/>17294 Valley Blvd<br/>Fontana, CA 92335</address>
@@ -134,8 +136,8 @@
   </section>
 </main>
 
-<footer class="footer">
-  <svg class="footer-mark" viewBox="0 0 480 320" aria-hidden="true"><use href="#luxuryTacoMark"/></svg>
+<footer class="footer" data-motion-section data-motion="reveal">
+  <svg class="footer-mark" viewBox="0 0 480 320" aria-hidden="true"><use href="#luxuryTacoMarkV62"/></svg>
   <a href="#top" class="footer-brand">Tacos Sinaloa</a>
   <div class="footer-meta"><span>TAQUERÍA · CARNICERÍA · FONTANA</span><span>© <b id="year"></b></span></div>
 </footer>

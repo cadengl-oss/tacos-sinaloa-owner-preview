@@ -20,3 +20,58 @@ if(hero){
   },{threshold:.08});
   barObserver.observe(hero);
 }
+
+const motionQuery=matchMedia("(prefers-reduced-motion: reduce)");
+const motionOK=!motionQuery.matches;
+if(motionOK){
+  document.documentElement.classList.add("motion-ready");
+  requestAnimationFrame(()=>requestAnimationFrame(()=>document.documentElement.classList.add("hero-entered")));
+
+  const motionItems=[...document.querySelectorAll("[data-motion]")];
+  const motionObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("is-visible");
+        motionObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:.08,rootMargin:"0px 0px -7% 0px"});
+  motionItems.forEach((el,i)=>{
+    el.style.transitionDelay=(Math.min((i%4)*55,165))+"ms";
+    motionObserver.observe(el);
+  });
+
+  const sections=[...document.querySelectorAll("[data-motion-section]")];
+  const sectionObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("is-motion-visible");
+        sectionObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:.02,rootMargin:"0px 0px -12% 0px"});
+  sections.forEach(el=>sectionObserver.observe(el));
+
+  const heroCore=document.querySelector(".hero-core");
+  let ticking=false;
+  const updateHeroMotion=()=>{
+    ticking=false;
+    if(!heroCore)return;
+    const y=Math.max(0,scrollY);
+    const shift=Math.min(y*.028,18);
+    const scale=1-Math.min(y/14000,.022);
+    heroCore.style.transform="translate3d(0,"+shift+"px,0) scale("+scale+")";
+  };
+  addEventListener("scroll",()=>{
+    if(!ticking){
+      ticking=true;
+      requestAnimationFrame(updateHeroMotion);
+    }
+  },{passive:true});
+  updateHeroMotion();
+
+  setTimeout(()=>{
+    motionItems.forEach(el=>el.classList.add("is-visible"));
+    sections.forEach(el=>el.classList.add("is-motion-visible"));
+  },1800);
+}

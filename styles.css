@@ -77,7 +77,46 @@ button,a{-webkit-tap-highlight-color:transparent}
 .footer-meta{width:100%;display:flex;justify-content:space-between;font:600 9px var(--sans);letter-spacing:.09em;text-transform:uppercase;margin-top:42px}
 .mobile-bar{display:none;opacity:0;transform:translateY(12px);transition:opacity .22s ease,transform .22s ease}
 
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* v6.2 motion system: identity-led, progressive, no scroll hijacking */
+.hero-core{will-change:transform;transform-origin:50% 48%}
+.motion-ready .hero-eyebrow,
+.motion-ready .luxury-taco-mark,
+.motion-ready .hero h1,
+.motion-ready .hero-location,
+.motion-ready .hero-actions{opacity:0;transform:translateY(10px);transition:opacity .72s cubic-bezier(.2,.7,.2,1),transform .72s cubic-bezier(.2,.7,.2,1)}
+.motion-ready .luxury-taco-mark{transform:translateY(10px) scale(.97)}
+.motion-ready.hero-entered .hero-eyebrow{opacity:1;transform:none;transition-delay:.05s}
+.motion-ready.hero-entered .luxury-taco-mark{opacity:1;transform:none;transition-delay:.14s}
+.motion-ready.hero-entered .hero h1{opacity:1;transform:none;transition-delay:.24s}
+.motion-ready.hero-entered .hero-location{opacity:1;transform:none;transition-delay:.32s}
+.motion-ready.hero-entered .hero-actions{opacity:1;transform:none;transition-delay:.40s}
+
+.motion-ready [data-motion="reveal"]{opacity:0;transform:translateY(18px);transition:opacity .68s cubic-bezier(.2,.7,.2,1),transform .68s cubic-bezier(.2,.7,.2,1)}
+.motion-ready [data-motion="reveal"].is-visible{opacity:1;transform:none}
+
+[data-motion="image"]{overflow:hidden}
+.motion-ready [data-motion="image"]{clip-path:inset(0 100% 0 0);transition:clip-path .82s cubic-bezier(.65,0,.25,1)}
+.motion-ready [data-motion="image"] img{transform:scale(1.025);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.motion-ready [data-motion="image"].is-visible{clip-path:inset(0 0 0 0)}
+.motion-ready [data-motion="image"].is-visible img{transform:scale(1)}
+
+section[data-motion-section],footer[data-motion-section]{position:relative}
+section[data-motion-section]::before,footer[data-motion-section]::before{content:"";position:absolute;top:0;left:var(--pad);height:1px;width:0;background:var(--gold-muted);transition:width .82s cubic-bezier(.65,0,.25,1)}
+.motion-ready section[data-motion-section].is-motion-visible::before,
+.motion-ready footer[data-motion-section].is-motion-visible::before{width:calc(100% - (var(--pad) * 2))}
+
+.menu-row strong{transition:transform .2s ease,color .2s ease}
+.menu-row:hover,.menu-row:focus-visible{padding-left:0}
+.menu-row:hover strong,.menu-row:focus-visible strong{transform:translateX(6px);color:var(--gold-bright)}
+.menu-row:focus-visible{outline-offset:-3px}
+\n@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .motion-ready .hero-eyebrow,.motion-ready .luxury-taco-mark,.motion-ready .hero h1,.motion-ready .hero-location,.motion-ready .hero-actions,
+  .motion-ready [data-motion="reveal"],.motion-ready [data-motion="image"]{opacity:1!important;transform:none!important;clip-path:none!important}
+  .motion-ready [data-motion="image"] img{transform:none!important}
+  section[data-motion-section]::before,footer[data-motion-section]::before{width:calc(100% - (var(--pad) * 2))!important}
+}
 
 @media(max-width:860px){
   .site-nav{grid-template-columns:1fr auto}.nav-menu{display:none}.brand{justify-self:start}.nav-yelp{display:none}
