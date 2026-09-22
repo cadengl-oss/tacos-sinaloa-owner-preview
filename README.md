@@ -1,4 +1,4 @@
-# Tacos Sinaloa Y Carniceria — Production v6.9
+# Tacos Sinaloa Y Carniceria — Production v6.9.1
 
 Permanent production deployment for the audited charcoal/gold Tacos Sinaloa site.
 
@@ -42,6 +42,15 @@ https://tacos.pilotsalesdistribution.com/
 - reproducible hardened static origin in server.py
 - visual system intentionally unchanged
 
+## Managed service layer — v6.9.1
+
+- public `/healthz` endpoint with explicit release identity and no-store caching
+- Nexus systemd health check verifies origin, Cloudflare public route, robots, sitemap, favicon, and required security headers
+- health check runs every 5 minutes and records the last success in `/var/lib/pse/tacos-sinaloa-health.json`
+- failures are visible in the `tacos-sinaloa-healthcheck.service` journal
+- owner content gate prevents unverified scraped menu prices, reviews, ordering URLs, parking, or holiday-hour claims from reaching production
+- menu owner template is ready for current approved categories, descriptions, prices, and availability
+
 ## Verification
 
 - permanent HTTPS returns 200 through Cloudflare
@@ -66,3 +75,4 @@ https://tacos.pilotsalesdistribution.com/
 - charcoal-v6.8-gallery
 - charcoal-v6.8.1-production
 - charcoal-v6.9-production
+- charcoal-v6.9.1-production
