@@ -1,39 +1,53 @@
 # Tacos Sinaloa y Carnicería — Final Presentation v6.6
 
-Two-pass final presentation build.
+Presentation-ready charcoal + antique-gold website candidate.
 
-## Pass 1 — art direction polish
-- stronger CTA hierarchy with Directions as the primary action
-- calmer selector proportions and spacing
-- corrected editorial photography crops
-- tighter section rhythm and menu scale
-- stronger Yelp action treatment
+## Final art direction
+- charcoal field with antique-gold identity system
+- custom Taco Mark with line-draw entrance
+- Newsreader display typography + Instrument Sans utility typography
+- single filled Directions CTA; Call and Yelp remain outlined
+- restrained hero side-notes and diamond divider
+- tighter section rhythm and calmer menu scale
+- refined selector image crops and responsive image viewport
 
-## Pass 2 — presentation hardening
-- responsive selector width fixed to 1120px max instead of shrink-wrapping
-- stable responsive image viewport and intrinsic image dimensions
+## Utility
+- semantic Taquería / Carnicería selector
+- one active editorial image at a time
+- live OPEN/CLOSED status in America/Los_Angeles
+- Dine-in / Takeout service note
+- direct Call / Directions / Yelp actions
+- Yelp reviews and customer-photo trust block
+- English / Spanish UI
+
+## Accessibility and motion
+- keyboard tabs: Left / Right / Home / End
+- proper aria-selected / tabpanel relationships
+- live status role + aria-live
+- language-aware tablist labeling
+- reduced-motion disables logo/panel motion and leaves all content visible
+- no scroll hijacking or infinite decorative animation
+
+## Presentation / performance hardening
 - local font preloads
-- richer Open Graph/Twitter metadata
-- Dine-in / Takeout service note with EN/ES copy
-- live status refreshes on focus/visibility changes
-- translated tablist accessibility label
-- final 1200x630 social image refreshed from exact presentation build
+- stable image dimensions + explicit responsive crop viewport
+- async image decoding and lazy loading for selector photography
+- 1200x630 social card with OG dimension and alt metadata
+- status refreshes on focus and app visibility restore
+- no missing local asset references
 
 ## Final verification
 - hosted HTTP 200
-- 390 / 768 / 1024 / 1440: zero horizontal overflow
-- semantic Taquería/Carnicería tabs and keyboard navigation pass
-- English/Spanish UI and live-status copy pass
-- America/Los_Angeles open/closed status pass
-- reduced-motion: no hidden content or panel animation
-- mobile CTA hidden on hero and visible after scroll
-- Newsreader + Instrument Sans computed correctly
-- no failed browser requests or page errors
-- no runtime external resource dependencies
-- mobile selector image 318x230; desktop selector image 613x410
+- 390 / 768 / 1024 / 1440: no horizontal overflow
+- zero browser page errors
+- zero failed requests / 4xx / 5xx local asset requests
+- both selector images verified after lazy load
+- EN/ES and live status verified
+- mobile sticky CTA hidden on hero, shown after hero
+- reduced-motion verified
 
-## Preserved candidates
+## Preserved branches
 - green-v6.3
 - charcoal-v6.4
 - charcoal-v6.5.2
-- charcoal-v6.6-final — current presentation build
+- charcoal-v6.6-final
