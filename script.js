@@ -1,6 +1,6 @@
 const copy={
-en:{menu:"Menu",call:"Call",hours:"Hours",daily:"Monday — Sunday",phone:"Phone",call_today:"Call for today's menu & counter selection",story_title:"one roof.<br/><em>two counters.</em>",story_copy:"A neighborhood taquería and carnicería together on Valley Blvd — food from the kitchen, fresh cuts from the counter, and one easy stop in Fontana.",directions:"Directions ↗",menu_title:"today's<br/><em>favorites.</em>",menu_note:"Menu items and preparation can change. Call to confirm today's selection.",today_selection:"Today's selection",counter_kicker:"From the counter",counter_title:"carni<br/><em>cería.</em>",counter_copy:"Fresh cuts and prepared meats are available from the counter. Call or stop in for today's selection.",ask_counter:"Ask the counter",visit:"Visit",visit_title:"see you<br/><em>on valley.</em>",directions_short:"Directions"},
-es:{menu:"Menú",call:"Llamar",hours:"Horario",daily:"Lunes — Domingo",phone:"Teléfono",call_today:"Llama para confirmar el menú y la selección del mostrador",story_title:"un lugar.<br/><em>dos mostradores.</em>",story_copy:"Taquería y carnicería juntas sobre Valley Blvd — comida de la cocina, cortes frescos del mostrador y una sola parada en Fontana.",directions:"Cómo llegar ↗",menu_title:"favoritos<br/><em>de hoy.</em>",menu_note:"Los platillos y preparaciones pueden cambiar. Llama para confirmar la selección de hoy.",today_selection:"Selección de hoy",counter_kicker:"Desde el mostrador",counter_title:"carni<br/><em>cería.</em>",counter_copy:"Cortes frescos y carnes preparadas están disponibles en el mostrador. Llama o visítanos para conocer la selección de hoy.",ask_counter:"Pregunta en mostrador",visit:"Visítanos",visit_title:"nos vemos<br/><em>en valley.</em>",directions_short:"Direcciones"}
+en:{menu:"Menu",call:"Call",hours:"Hours",daily:"Monday — Sunday",phone:"Phone",call_today:"Call for today's menu & counter selection",story_title:"one roof.<br/><em>two counters.</em>",story_copy:"A neighborhood taquería and carnicería together on Valley Blvd — food from the kitchen, fresh cuts from the counter, and one easy stop in Fontana.",directions:"Directions ↗",menu_title:"today's<br/><em>favorites.</em>",menu_note:"Menu items and preparation can change. Call to confirm today's selection.",today_selection:"Today's menu",counter_kicker:"From the counter",counter_title:"carni<br/><em>cería.</em>",counter_copy:"Fresh cuts and prepared meats are available from the counter. Call or stop in for today's selection.",ask_counter:"Ask the counter",visit:"Visit",visit_title:"see you<br/><em>on valley.</em>",directions_short:"Directions"},
+es:{menu:"Menú",call:"Llamar",hours:"Horario",daily:"Lunes — Domingo",phone:"Teléfono",call_today:"Llama para confirmar el menú y la selección del mostrador",story_title:"un lugar.<br/><em>dos mostradores.</em>",story_copy:"Taquería y carnicería juntas sobre Valley Blvd — comida de la cocina, cortes frescos del mostrador y una sola parada en Fontana.",directions:"Cómo llegar ↗",menu_title:"favoritos<br/><em>de hoy.</em>",menu_note:"Los platillos y preparaciones pueden cambiar. Llama para confirmar la selección de hoy.",today_selection:"Menú de hoy",counter_kicker:"Desde el mostrador",counter_title:"carni<br/><em>cería.</em>",counter_copy:"Cortes frescos y carnes preparadas están disponibles en el mostrador. Llama o visítanos para conocer la selección de hoy.",ask_counter:"Pregunta en mostrador",visit:"Visítanos",visit_title:"nos vemos<br/><em>en valley.</em>",directions_short:"Direcciones"}
 };
 let lang="en";
 const toggle=document.querySelector(".language-toggle");
@@ -22,3 +22,24 @@ if(hero){
   barObserver.observe(hero);
 }
 document.getElementById("year").textContent=new Date().getFullYear();
+
+const nav=document.querySelector(".site-nav");
+const themedSections=[...document.querySelectorAll("[data-nav]")];
+function updateNavTheme(){
+  if(!nav||!themedSections.length)return;
+  const probe=Math.min(innerHeight-1,nav.getBoundingClientRect().bottom+4);
+  const section=themedSections.find(el=>{
+    const r=el.getBoundingClientRect();
+    return r.top<=probe && r.bottom>probe;
+  }) || themedSections[0];
+  nav.classList.toggle("nav-light",section.dataset.nav==="light");
+  nav.classList.toggle("nav-dark",section.dataset.nav==="dark");
+}
+let navTick=false;
+addEventListener("scroll",()=>{
+  if(navTick)return;
+  navTick=true;
+  requestAnimationFrame(()=>{updateNavTheme();navTick=false});
+},{passive:true});
+addEventListener("resize",updateNavTheme);
+updateNavTheme();

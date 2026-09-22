@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#e9b8aa" />
+  <meta name="theme-color" content="#23372d" />
   <meta name="description" content="Tacos Sinaloa y Carnicería in Fontana, California — taquería and neighborhood carnicería at 17294 Valley Blvd." />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Tacos Sinaloa y Carnicería — Fontana, CA" />
@@ -25,7 +25,7 @@
   </defs>
 </svg>
 
-<header class="site-nav">
+<header class="site-nav nav-light">
   <a class="nav-link" href="#menu" data-i18n="menu">Menu</a>
   <a class="brand" href="#top">tacos sinaloa</a>
   <div class="nav-actions">
@@ -37,44 +37,27 @@
 </header>
 
 <main id="main">
-  <section class="hero" id="top" aria-labelledby="hero-heading">
+  <section class="hero" id="top" aria-labelledby="hero-heading" data-nav="light">
     <h1 id="hero-heading" class="sr-only">Tacos Sinaloa y Carnicería</h1>
-
     <div class="hero-note left">TAQUERÍA<br/>CARNICERÍA</div>
     <div class="hero-note right">FONTANA, CA<br/>VALLEY BLVD.</div>
 
-    <div class="hero-orbit" aria-hidden="true">
-      <svg class="satellite sat-a" viewBox="0 0 420 250">
-        <image href="./assets/pozole.jpg" x="-20" y="-10" width="460" height="280" preserveAspectRatio="xMidYMid slice" clip-path="url(#tacoClip)"/>
-        <path class="photo-split" d="M80 168 Q210 112 340 168"/>
+    <div class="hero-emblem reveal">
+      <svg class="arc-label" viewBox="0 0 360 120" aria-hidden="true">
+        <defs><path id="heroArc" d="M40,105 Q180,-5 320,105"/></defs>
+        <text><textPath href="#heroArc" startOffset="50%" text-anchor="middle">SINALOA · FONTANA · VALLEY BLVD</textPath></text>
       </svg>
-      <svg class="satellite sat-b outline-taco" viewBox="0 0 420 250">
-        <path d="M44 181C67 102 130 54 210 54s143 48 166 127c4 15-7 26-22 26H66c-15 0-26-11-22-26Z"/>
-        <path d="M92 167c31-21 70-32 118-32s87 11 118 32"/>
+      <span class="hero-dot" aria-hidden="true"></span>
+      <svg class="hero-logo" viewBox="0 0 420 250" role="img" aria-label="Taco mark">
+        <path class="shell" d="M44 181C67 102 130 54 210 54s143 48 166 127c4 15-7 26-22 26H66c-15 0-26-11-22-26Z"/>
+        <path class="fold" d="M92 167c31-21 70-32 118-32s87 11 118 32"/>
       </svg>
-      <svg class="satellite sat-c" viewBox="0 0 420 250">
-        <image href="./assets/carniceria.jpg" x="-20" y="-10" width="460" height="280" preserveAspectRatio="xMidYMid slice" clip-path="url(#tacoClip)"/>
-        <path class="photo-split" d="M80 168 Q210 112 340 168"/>
-      </svg>
-      <span class="orbit-dot dot-a"></span>
-      <span class="orbit-dot dot-b"></span>
     </div>
 
-    <div class="hero-mark reveal">
-      <svg class="hero-photo" viewBox="0 0 420 250" role="img" aria-label="Tacos from Tacos Sinaloa">
-        <image href="./assets/tacos-hero.jpg" x="-20" y="-10" width="460" height="280" preserveAspectRatio="xMidYMid slice" clip-path="url(#tacoClip)"/>
-        <path class="hero-split" d="M72 169 Q210 112 348 169"/>
-      </svg>
-      <div class="hero-caption">
-        <span>17294 VALLEY BLVD</span>
-        <i></i>
-        <span>OPEN DAILY 8—8</span>
-      </div>
-    </div>
-
+    <div class="hero-wordmark" aria-hidden="true">tacos sinaloa</div>
   </section>
 
-  <section class="info-panel">
+  <section class="info-panel" data-nav="light">
     <div class="info-rule horizontal top"><i></i><i></i></div>
     <div class="info-rule horizontal middle"><i></i><i></i></div>
     <div class="info-rule vertical"><i></i><i></i></div>
@@ -101,7 +84,7 @@
     </div>
   </section>
 
-  <section class="story">
+  <section class="story" data-nav="dark">
     <div class="story-kicker reveal">TAQUERÍA + CARNICERÍA</div>
     <div class="story-grid">
       <h2 class="display reveal" data-i18n="story_title">one roof.<br/><em>two counters.</em></h2>
@@ -111,16 +94,25 @@
       </div>
     </div>
 
-    <figure class="story-photo reveal">
-      <svg viewBox="0 0 420 250" role="img" aria-label="Tacos from Tacos Sinaloa">
-        <image href="./assets/tacos-hero.jpg" x="-20" y="-10" width="460" height="280" preserveAspectRatio="xMidYMid slice" clip-path="url(#tacoClip)"/>
-        <path class="photo-split dark" d="M76 169 Q210 114 344 169"/>
-      </svg>
-      <figcaption>01 / FROM THE KITCHEN</figcaption>
-    </figure>
+    <div class="story-pair reveal">
+      <figure class="story-photo story-kitchen">
+        <svg viewBox="0 0 420 250" role="img" aria-label="Food from the kitchen">
+          <image href="./assets/tacos-hero.jpg" x="-20" y="-10" width="460" height="280" preserveAspectRatio="xMidYMid slice" clip-path="url(#tacoClip)"/>
+          <path class="photo-split dark" d="M76 169 Q210 114 344 169"/>
+        </svg>
+        <figcaption>01 / FROM THE KITCHEN</figcaption>
+      </figure>
+      <figure class="story-photo story-market">
+        <svg viewBox="0 0 420 250" role="img" aria-label="Carnicería counter">
+          <image href="./assets/carniceria.jpg" x="-20" y="-10" width="460" height="280" preserveAspectRatio="xMidYMid slice" clip-path="url(#tacoClip)"/>
+          <path class="photo-split dark" d="M76 169 Q210 114 344 169"/>
+        </svg>
+        <figcaption>02 / FROM THE COUNTER</figcaption>
+      </figure>
+    </div>
   </section>
 
-  <section class="menu-section" id="menu">
+  <section class="menu-section" id="menu" data-nav="light">
     <div class="menu-heading reveal">
       <span class="eyebrow">FROM THE KITCHEN</span>
       <h2 class="display" data-i18n="menu_title">today's<br/><em>favorites.</em></h2>
@@ -131,7 +123,7 @@
       <a href="tel:+19098236253" class="menu-row"><span>01</span><strong>Tacos</strong><i></i></a>
       <a href="tel:+19098236253" class="menu-row"><span>02</span><strong>Pozole</strong><i></i></a>
       <a href="tel:+19098236253" class="menu-row"><span>03</span><strong>Quesadillas</strong><i></i></a>
-      <a href="tel:+19098236253" class="menu-row"><span>04</span><strong data-i18n="today_selection">Today's selection</strong><i></i></a>
+      <a href="tel:+19098236253" class="menu-row"><span>04</span><strong data-i18n="today_selection">Today's menu</strong><i></i></a>
     </div>
 
     <div class="food-editorial">
@@ -152,7 +144,7 @@
     </div>
   </section>
 
-  <section class="counter-section" id="carniceria">
+  <section class="counter-section" id="carniceria" data-nav="dark">
     <div class="counter-copy reveal">
       <span class="eyebrow" data-i18n="counter_kicker">From the counter</span>
       <h2 class="display" data-i18n="counter_title">carni<br/><em>cería.</em></h2>
@@ -161,18 +153,16 @@
     </div>
 
     <div class="counter-visual reveal">
-      <svg class="counter-outline" viewBox="0 0 420 250" aria-hidden="true">
-        <path d="M44 181C67 102 130 54 210 54s143 48 166 127c4 15-7 26-22 26H66c-15 0-26-11-22-26Z"/>
-        <path d="M92 167c31-21 70-32 118-32s87 11 118 32"/>
-      </svg>
-      <svg class="counter-photo" viewBox="0 0 420 250">
+      <svg class="counter-combined" viewBox="0 0 420 250" role="img" aria-label="Carnicería counter">
         <image href="./assets/carniceria.jpg" x="-20" y="-10" width="460" height="280" preserveAspectRatio="xMidYMid slice" clip-path="url(#tacoClip)"/>
+        <path class="counter-shell" d="M44 181C67 102 130 54 210 54s143 48 166 127c4 15-7 26-22 26H66c-15 0-26-11-22-26Z"/>
+        <path class="counter-fold" d="M92 167c31-21 70-32 118-32s87 11 118 32"/>
       </svg>
       <span class="counter-dot"></span>
     </div>
   </section>
 
-  <section class="visit-section">
+  <section class="visit-section" data-nav="light">
     <div class="visit-copy reveal">
       <span class="eyebrow" data-i18n="visit">Visit</span>
       <h2 class="display" data-i18n="visit_title">see you<br/><em>on valley.</em></h2>
@@ -196,7 +186,7 @@
   </section>
 </main>
 
-<footer class="footer">
+<footer class="footer" data-nav="dark">
   <span>TAQUERÍA · CARNICERÍA · FONTANA</span>
   <svg class="footer-mark" viewBox="0 0 420 250" aria-hidden="true">
     <path d="M44 181C67 102 130 54 210 54s143 48 166 127c4 15-7 26-22 26H66c-15 0-26-11-22-26Z"/>
