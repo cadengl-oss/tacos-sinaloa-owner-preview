@@ -1,22 +1,6 @@
 const copy={
-  en:{
-    nav_menu:"Menu",call:"Call",call_now:"Call now",directions:"Directions ↗",directions_short:"Directions",
-    hero_intro:"Kitchen + counter. One neighborhood stop on Valley Blvd.",
-    kitchen_kicker:"FROM THE KITCHEN",kitchen_title:"COME<br/><em>HUNGRY.</em>",kitchen_copy:"A casual Fontana stop for tacos and Mexican comfort food. Call for today's menu and availability.",
-    popular_kicker:"POPULAR PICKS",popular_note:"Public listings highlight these favorites. Call to confirm the current menu, preparation and availability.",
-    counter_kicker:"FROM THE COUNTER",counter_title:"CARNI<br/><em>CERÍA.</em>",counter_copy:"Fresh cuts and prepared meats are available from the counter. Call or stop in for today's selection.",ask_counter:"Ask the counter",
-    place_copy:"Taquería and carnicería under one roof — practical, casual, and built for repeat visits.",
-    visit_kicker:"COME THROUGH",visit_title:"SEE YOU<br/><em>ON VALLEY.</em>",hours:"HOURS",daily:"DAYS",phone:"PHONE"
-  },
-  es:{
-    nav_menu:"Menú",call:"Llamar",call_now:"Llámanos",directions:"Cómo llegar ↗",directions_short:"Direcciones",
-    hero_intro:"Cocina + mostrador. Una sola parada sobre Valley Blvd.",
-    kitchen_kicker:"DESDE LA COCINA",kitchen_title:"LLEGA CON<br/><em>HAMBRE.</em>",kitchen_copy:"Un lugar casual en Fontana para tacos y comida mexicana. Llama para confirmar el menú y disponibilidad de hoy.",
-    popular_kicker:"FAVORITOS",popular_note:"Los listados públicos destacan estos favoritos. Llama para confirmar el menú, la preparación y disponibilidad.",
-    counter_kicker:"DESDE EL MOSTRADOR",counter_title:"CARNI<br/><em>CERÍA.</em>",counter_copy:"Cortes frescos y carnes preparadas están disponibles en el mostrador. Llama o visítanos para conocer la selección de hoy.",ask_counter:"Pregunta en mostrador",
-    place_copy:"Taquería y carnicería bajo un mismo techo — práctico, casual y para volver seguido.",
-    visit_kicker:"VEN A VERNOS",visit_title:"NOS VEMOS<br/><em>EN VALLEY.</em>",hours:"HORARIO",daily:"DÍAS",phone:"TELÉFONO"
-  }
+en:{menu:"Menu",call:"Call",hours:"Hours",daily:"Monday — Sunday",phone:"Phone",call_today:"Call for today's menu & counter selection",story_title:"one roof.<br/><em>two counters.</em>",story_copy:"A neighborhood taquería and carnicería together on Valley Blvd — food from the kitchen, fresh cuts from the counter, and one easy stop in Fontana.",directions:"Directions ↗",menu_title:"today's<br/><em>favorites.</em>",menu_note:"Menu items and preparation can change. Call to confirm today's selection.",today_selection:"Today's selection",counter_kicker:"From the counter",counter_title:"carni<br/><em>cería.</em>",counter_copy:"Fresh cuts and prepared meats are available from the counter. Call or stop in for today's selection.",ask_counter:"Ask the counter",visit:"Visit",visit_title:"see you<br/><em>on valley.</em>",directions_short:"Directions"},
+es:{menu:"Menú",call:"Llamar",hours:"Horario",daily:"Lunes — Domingo",phone:"Teléfono",call_today:"Llama para confirmar el menú y la selección del mostrador",story_title:"un lugar.<br/><em>dos mostradores.</em>",story_copy:"Taquería y carnicería juntas sobre Valley Blvd — comida de la cocina, cortes frescos del mostrador y una sola parada en Fontana.",directions:"Cómo llegar ↗",menu_title:"favoritos<br/><em>de hoy.</em>",menu_note:"Los platillos y preparaciones pueden cambiar. Llama para confirmar la selección de hoy.",today_selection:"Selección de hoy",counter_kicker:"Desde el mostrador",counter_title:"carni<br/><em>cería.</em>",counter_copy:"Cortes frescos y carnes preparadas están disponibles en el mostrador. Llama o visítanos para conocer la selección de hoy.",ask_counter:"Pregunta en mostrador",visit:"Visítanos",visit_title:"nos vemos<br/><em>en valley.</em>",directions_short:"Direcciones"}
 };
 let lang="en";
 const toggle=document.querySelector(".language-toggle");
@@ -29,10 +13,12 @@ function renderLanguage(){
 }
 toggle.addEventListener("click",()=>{lang=lang==="en"?"es":"en";renderLanguage()});
 const reveals=[...document.querySelectorAll(".reveal")];
-const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");io.unobserve(entry.target)}}),{threshold:.04,rootMargin:"0px 0px 90px"});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("is-visible");io.unobserve(e.target)}}),{threshold:.04,rootMargin:"0px 0px 90px"});
 reveals.forEach(el=>io.observe(el));
 setTimeout(()=>reveals.forEach(el=>el.classList.add("is-visible")),1400);
-const tacoBuild=document.querySelector(".taco-build");
-const tacoIo=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("is-active")}),{threshold:.28});
-if(tacoBuild)tacoIo.observe(tacoBuild);
+const hero=document.querySelector(".hero");
+if(hero){
+  const barObserver=new IntersectionObserver(([entry])=>document.body.classList.toggle("bar-visible",!entry.isIntersecting),{threshold:.08});
+  barObserver.observe(hero);
+}
 document.getElementById("year").textContent=new Date().getFullYear();
