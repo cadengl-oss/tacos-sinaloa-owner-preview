@@ -1,0 +1,29 @@
+{
+  "_publication_status": "PUBLISHED",
+  "_verified_on": "2026-09-22",
+  "_note": "Matches the currently published no-price menu highlights. Owner approval is still required before adding prices or additional items.",
+  "items": [
+    {
+      "id": "tacos",
+      "name_en": "Tacos",
+      "name_es": "Tacos"
+    },
+    {
+      "id": "birria",
+      "name_en": "Birria",
+      "name_es": "Birria"
+    },
+    {
+      "id": "menudo",
+      "name_en": "Menudo",
+      "name_es": "Menudo"
+    },
+    {
+      "id": "today-menu",
+      "name_en": "Today's Menu",
+      "name_es": "Menú de hoy",
+      "kind": "call_cta"
+    }
+  ],
+  "_owner_approved": false
+}

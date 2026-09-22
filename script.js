@@ -4,6 +4,43 @@ const copy={
 };
 let lang="en";
 const toggle=document.querySelector(".language-toggle");
+
+const menuRoot=document.getElementById("menuItems");
+let publishedMenu=null;
+
+function renderPublishedMenu(){
+  if(!menuRoot||!publishedMenu||publishedMenu._publication_status!=="PUBLISHED"||!Array.isArray(publishedMenu.items)||!publishedMenu.items.length)return;
+  const fragment=document.createDocumentFragment();
+  publishedMenu.items.forEach((item,index)=>{
+    const row=document.createElement("a");
+    row.className="menu-row menu-chip is-visible";
+    row.href="tel:+19098236253";
+    row.dataset.menuId=String(item.id||index);
+    const number=document.createElement("span");
+    number.textContent=String(index+1).padStart(2,"0");
+    const label=document.createElement("strong");
+    label.textContent=lang==="es"?(item.name_es||item.name_en||""):(item.name_en||item.name_es||"");
+    row.append(number,label);
+    fragment.append(row);
+  });
+  menuRoot.replaceChildren(fragment);
+  menuRoot.dataset.menuState="published";
+}
+
+async function loadPublishedMenu(){
+  if(!menuRoot)return;
+  try{
+    const response=await fetch("./content/menu.json",{cache:"no-cache"});
+    if(!response.ok)throw new Error("menu HTTP "+response.status);
+    const data=await response.json();
+    if(data&&data._publication_status==="PUBLISHED"&&Array.isArray(data.items)&&data.items.length){
+      publishedMenu=data;
+      renderPublishedMenu();
+    }
+  }catch(error){
+    menuRoot.dataset.menuState="fallback";
+  }
+}
 function renderLanguage(){
   document.documentElement.lang=lang;
   document.querySelectorAll("[data-i18n]").forEach(el=>{const v=copy[lang][el.dataset.i18n];if(v)el.innerHTML=v});
@@ -11,8 +48,10 @@ function renderLanguage(){
   toggle.setAttribute("aria-pressed",lang==="es"?"true":"false");
   toggle.setAttribute("aria-label",lang==="en"?"Cambiar a español":"Switch to English");
   if(counterTabList)counterTabList.setAttribute("aria-label",lang==="en"?"Choose Taquería or Carnicería":"Elige Taquería o Carnicería");
+  renderPublishedMenu();
 }
 toggle.addEventListener("click",()=>{lang=lang==="en"?"es":"en";renderLanguage()});
+loadPublishedMenu();
 document.getElementById("year").textContent=new Date().getFullYear();
 const hero=document.querySelector(".hero");
 if(hero){
