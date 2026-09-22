@@ -173,7 +173,7 @@ button,a{-webkit-tap-highlight-color:transparent}
   .hero-scroll{display:none}.mini-a{width:76px;height:43px;top:24%}.mini-b{right:3%;top:18%}.mini-c{width:70px;height:40px;bottom:22%}.dot-a{left:7%}
   .kitchen{padding:90px 18px}.kitchen h2,.deconstruct h2,.visit h2{font-size:22vw}.kitchen-head p,.deconstruct-copy p,.poster-photo p{font-size:19px}
   .food-collage{height:650px;margin-top:60px}.shot-a{width:72%;left:-3%;bottom:20px}.shot-b{width:58%;left:auto;right:-4%;top:0}.shot-c{width:53%;right:4%;bottom:130px}
-  .menu-listing{padding:80px 18px;gap:42px}.menu-item{min-height:100px;grid-template-columns:28px 1fr 42px}.menu-item strong{font-size:12vw}.menu-taco{width:40px;height:23px;opacity:.65}
+  .menu-listing{padding:80px 18px;gap:42px;min-width:0}.menu-side,.menu-rows{min-width:0;width:100%}.menu-item{min-height:100px;grid-template-columns:28px minmax(0,1fr) 36px;min-width:0;width:100%;gap:10px}.menu-item strong{font-size:clamp(36px,11vw,46px);min-width:0;overflow-wrap:anywhere}.menu-taco{width:36px;height:22px;opacity:.65}
   .deconstruct{padding:88px 18px;min-height:auto}.taco-build{height:470px}.build-shell{width:92%;height:190px}.build-meat{width:76%}.build-greens{width:72%}.build-photo{width:72%;height:180px}.build-label{display:none}
   .poster-break{min-height:auto}.poster-card,.poster-photo{padding:70px 18px}.poster-card{min-height:560px}.poster-card>span{margin-top:100px}.poster-card h2{font-size:21vw}.poster-photo{min-height:560px}.poster-photo .taco-mask{width:94%}
   .visit-panel{padding:84px 18px}.map-wrap{min-height:480px}.footer{min-height:380px;padding:70px 18px 24px}.footer-mark{width:70vw}.footer-word{font-size:18vw}.footer-bottom{gap:14px;text-align:left}
