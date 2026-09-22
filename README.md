@@ -1,16 +1,26 @@
-# Tacos Sinaloa y Carnicería — Owner Preview v5.2
+# Tacos Sinaloa y Carnicería — Owner Preview v5.2.1
 
-Judged visual refinement of the Muchacha-inspired Taco Mark direction.
+Locked visual candidate.
 
-- Dark-green brand hero with refined Taco Mark + cropped wordmark
-- Context-aware navigation contrast on light/dark sections
-- Kitchen + carnicería paired story composition
-- Tightened menu typography and mobile line breaks
-- Unified carnicería photo-mark treatment
+## Direction
+Muchacha-inspired hospitality identity translated into an original Taco Mark system:
+- deep-green brand hero
+- refined blush Taco Mark
 - Bodoni Moda + Manrope local typography
-- Softened mobile CTA controls
-- Responsive mobile/tablet/desktop
-- EN/ES toggle
-- Local business imagery and structured data
+- kitchen + carnicería dual-story composition
+- editorial menu
+- integrated carnicería image-mark
+- responsive light/dark navigation
+- restrained mobile conversion bar
 
-GitHub is source control only while Actions/Pages billing is paused. Current public preview is served separately through the PSE Cloudflare tunnel.
+## Verification
+- 390px mobile: no horizontal overflow
+- 1024px tablet: no horizontal overflow
+- 1440px desktop: no horizontal overflow
+- EN/ES toggle verified
+- nav contrast verified against actual background under fixed header
+- skip-link focus verified
+- mobile CTA hidden on hero, visible after hero
+- local imagery and fonts only
+
+GitHub remains source control while Actions/Pages billing is paused. Public preview is served separately through the PSE Cloudflare tunnel.
