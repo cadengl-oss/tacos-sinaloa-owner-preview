@@ -9,9 +9,17 @@
   <meta property="og:title" content="Tacos Sinaloa y Carnicería — Fontana, CA" />
   <meta property="og:description" content="Taquería + carnicería on Valley Blvd in Fontana. Open daily 8 AM–8 PM." />
   <meta property="og:image" content="./assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Tacos Sinaloa y Carnicería — Fontana, California" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tacos Sinaloa y Carnicería — Fontana, CA" />
+  <meta name="twitter:description" content="Taquería + carnicería on Valley Blvd in Fontana. Open daily 8 AM–8 PM." />
+  <meta name="twitter:image" content="./assets/og.jpg" />
   <title>Tacos Sinaloa y Carnicería — Fontana, CA</title>
   <script>document.documentElement.classList.add("js")</script>
+  <link rel="icon" href="./assets/identity/taco-mark.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -22,6 +30,10 @@
     <clipPath id="tacoClip" clipPathUnits="objectBoundingBox">
       <path d="M.045,.75 C.105,.33 .295,.14 .50,.14 C.705,.14 .895,.33 .955,.75 C.97,.84 .90,.89 .82,.89 H.18 C.10,.89 .03,.84 .045,.75 Z"/>
     </clipPath>
+    <symbol id="tacoMark" viewBox="0 0 420 250">
+      <path fill="none" stroke="currentColor" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round" d="M44 182C67 104 131 57 210 57s143 47 166 125c4 15-7 26-22 26H66c-15 0-26-11-22-26Z"/>
+      <path fill="none" stroke="currentColor" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round" d="M94 167c31-20 70-30 116-30s85 10 116 30"/>
+    </symbol>
   </defs>
 </svg>
 
@@ -49,8 +61,7 @@
       </svg>
       <span class="hero-dot" aria-hidden="true"></span>
       <svg class="hero-logo" viewBox="0 0 420 250" role="img" aria-label="Taco mark">
-        <path class="shell" d="M44 181C67 102 130 54 210 54s143 48 166 127c4 15-7 26-22 26H66c-15 0-26-11-22-26Z"/>
-        <path class="fold" d="M92 167c31-21 70-32 118-32s87 11 118 32"/>
+        <use href="#tacoMark"/>
       </svg>
     </div>
 
@@ -76,8 +87,7 @@
 
     <div class="info-address reveal">
       <svg class="line-mark" viewBox="0 0 420 250" aria-hidden="true">
-        <path d="M44 181C67 102 130 54 210 54s143 48 166 127c4 15-7 26-22 26H66c-15 0-26-11-22-26Z"/>
-        <path d="M92 167c31-21 70-32 118-32s87 11 118 32"/>
+        <use href="#tacoMark"/>
       </svg>
       <h2>Valley Blvd.<br/>Fontana</h2>
       <p>17294 Valley Blvd<br/>Fontana, CA 92335</p>
@@ -155,8 +165,7 @@
     <div class="counter-visual reveal">
       <svg class="counter-combined" viewBox="0 0 420 250" role="img" aria-label="Carnicería counter">
         <image href="./assets/carniceria.jpg" x="-20" y="-10" width="460" height="280" preserveAspectRatio="xMidYMid slice" clip-path="url(#tacoClip)"/>
-        <path class="counter-shell" d="M44 181C67 102 130 54 210 54s143 48 166 127c4 15-7 26-22 26H66c-15 0-26-11-22-26Z"/>
-        <path class="counter-fold" d="M92 167c31-21 70-32 118-32s87 11 118 32"/>
+        <use href="#tacoMark"/>
       </svg>
       <span class="counter-dot"></span>
     </div>
@@ -189,8 +198,7 @@
 <footer class="footer" data-nav="dark">
   <span>TAQUERÍA · CARNICERÍA · FONTANA</span>
   <svg class="footer-mark" viewBox="0 0 420 250" aria-hidden="true">
-    <path d="M44 181C67 102 130 54 210 54s143 48 166 127c4 15-7 26-22 26H66c-15 0-26-11-22-26Z"/>
-    <path d="M92 167c31-21 70-32 118-32s87 11 118 32"/>
+    <use href="#tacoMark"/>
   </svg>
   <a href="#top" class="footer-brand">tacos sinaloa</a>
   <div class="footer-meta"><span>17294 VALLEY BLVD</span><span>© <b id="year"></b></span></div>
