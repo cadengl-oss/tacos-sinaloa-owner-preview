@@ -33,6 +33,15 @@ https://tacos.pilotsalesdistribution.com/
 - Open Graph / Twitter social image uses an absolute permanent URL
 - JSON-LD includes permanent url and social image URL
 
+## Professional delivery layer — v6.9
+
+- robots.txt and sitemap.xml
+- conventional favicon.ico plus web app manifest
+- origin-level security headers (CSP, HSTS, nosniff, frame protection, referrer policy, permissions policy)
+- explicit cache policy for HTML, code, fonts and media
+- reproducible hardened static origin in server.py
+- visual system intentionally unchanged
+
 ## Verification
 
 - permanent HTTPS returns 200 through Cloudflare

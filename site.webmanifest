@@ -1,0 +1,22 @@
+{
+  "name": "Tacos Sinaloa Y Carniceria",
+  "short_name": "Tacos Sinaloa",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121210",
+  "theme_color": "#121210",
+  "icons": [
+    {
+      "src": "/assets/identity/luxury-taco-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
