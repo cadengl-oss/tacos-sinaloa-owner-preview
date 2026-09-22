@@ -179,7 +179,7 @@ section[data-motion-section]::before,footer[data-motion-section]::before{content
 .menu-row:hover,.menu-row:focus-visible{padding-left:0}
 .menu-row:hover strong,.menu-row:focus-visible strong{transform:translateX(6px);color:var(--gold-bright)}
 .menu-row:focus-visible{outline-offset:-3px}
-\n@media(prefers-reduced-motion:reduce){
+@media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .motion-ready .hero-eyebrow,.motion-ready .hero h1,.motion-ready .hero-location,.motion-ready .hero-actions,
   .motion-ready [data-motion="reveal"],.motion-ready [data-motion="image"]{opacity:1!important;transform:none!important;clip-path:none!important}
@@ -252,3 +252,5 @@ section[data-motion-section]::before,footer[data-motion-section]::before{content
   .brand-bridge{gap:10px;margin-top:54px}
   .brand-bridge b{font-size:8px;letter-spacing:.10em}
 }
+
+@media(prefers-reduced-motion:reduce){.counter-panel.is-active{animation:none!important}.counter-tab-indicator{transition:none!important}}
