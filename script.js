@@ -1,6 +1,6 @@
 const copy={
-  en:{menu:"Menu",call:"Call",call_now:"Call now ↗",directions:"Directions ↗",directions_short:"Directions",hours:"Hours",daily:"Monday — Sunday",location:"Location",phone:"Phone",call_menu:"Call for today's menu",intro_title:"Two counters.<br/>One neighborhood stop.",intro_copy:"Mexican food from the kitchen and a carnicería counter under one roof on Valley Blvd.",kitchen:"From the kitchen",menu_title:"Menu highlights",menu_note:"Public listings consistently mention these favorites. Call to confirm today's preparation and availability.",today_menu:"Today's Menu",counter:"From the counter",counter_title:"Carnicería",counter_copy:"A neighborhood meat counter alongside the taquería. Call or stop in to ask about today's selection.",ask_counter:"Ask the counter ↗",visit:"Visit",visit_title:"Valley Blvd.<br/>Fontana."},
-  es:{menu:"Menú",call:"Llamar",call_now:"Llamar ↗",directions:"Cómo llegar ↗",directions_short:"Direcciones",hours:"Horario",daily:"Lunes — Domingo",location:"Ubicación",phone:"Teléfono",call_menu:"Llama para confirmar el menú de hoy",intro_title:"Dos mostradores.<br/>Una parada del barrio.",intro_copy:"Comida mexicana de la cocina y una carnicería bajo un mismo techo sobre Valley Blvd.",kitchen:"Desde la cocina",menu_title:"Favoritos del menú",menu_note:"Los listados públicos mencionan estos favoritos. Llama para confirmar la preparación y disponibilidad de hoy.",today_menu:"Menú de hoy",counter:"Desde el mostrador",counter_title:"Carnicería",counter_copy:"Una carnicería del barrio junto a la taquería. Llama o visítanos para preguntar por la selección de hoy.",ask_counter:"Pregunta en mostrador ↗",visit:"Visítanos",visit_title:"Valley Blvd.<br/>Fontana."}
+  en:{menu:"Menu",call:"Call",call_now:"Call now ↗",directions:"Directions ↗",directions_short:"Directions",hours:"Hours",daily:"Monday — Sunday",location:"Location",phone:"Phone",call_menu:"Call for today's menu",intro_title:"Taquería & Carnicería",intro_copy:"Mexican food from the kitchen and a carnicería counter under one roof on Valley Blvd.",kitchen:"From the kitchen",menu_title:"Menu",menu_note:"Public listings consistently mention these favorites. Call to confirm today's preparation and availability.",today_menu:"Today's Menu",counter:"From the counter",counter_title:"Carnicería",counter_copy:"A neighborhood meat counter alongside the taquería. Call or stop in to ask about today's selection.",ask_counter:"Ask the counter ↗",visit:"Visit",visit_title:"Valley Blvd., Fontana"},
+  es:{menu:"Menú",call:"Llamar",call_now:"Llamar ↗",directions:"Cómo llegar ↗",directions_short:"Direcciones",hours:"Horario",daily:"Lunes — Domingo",location:"Ubicación",phone:"Teléfono",call_menu:"Llama para confirmar el menú de hoy",intro_title:"Taquería y Carnicería",intro_copy:"Comida mexicana de la cocina y una carnicería bajo un mismo techo sobre Valley Blvd.",kitchen:"Desde la cocina",menu_title:"Menú",menu_note:"Los listados públicos mencionan estos favoritos. Llama para confirmar la preparación y disponibilidad de hoy.",today_menu:"Menú de hoy",counter:"Desde el mostrador",counter_title:"Carnicería",counter_copy:"Una carnicería del barrio junto a la taquería. Llama o visítanos para preguntar por la selección de hoy.",ask_counter:"Pregunta en mostrador ↗",visit:"Visítanos",visit_title:"Valley Blvd., Fontana"}
 };
 let lang="en";
 const toggle=document.querySelector(".language-toggle");
@@ -13,3 +13,10 @@ function renderLanguage(){
 }
 toggle.addEventListener("click",()=>{lang=lang==="en"?"es":"en";renderLanguage()});
 document.getElementById("year").textContent=new Date().getFullYear();
+const hero=document.querySelector(".hero");
+if(hero){
+  const barObserver=new IntersectionObserver(([entry])=>{
+    document.body.classList.toggle("bar-visible",!entry.isIntersecting);
+  },{threshold:.08});
+  barObserver.observe(hero);
+}

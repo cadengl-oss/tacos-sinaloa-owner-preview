@@ -1,33 +1,26 @@
-# Tacos Sinaloa y Carnicería — Owner Preview v6
+# Tacos Sinaloa y Carnicería — Owner Preview v6.1.1
 
-Luxury-minimal green + gold direction.
+Typography-tightened luxury-minimal candidate.
 
-## Locked direction
-- forest-green and antique-gold UI only
-- custom professional taco emblem
-- Bodoni Moda + Manrope local typography
-- restrained Rolex-inspired spacing and hierarchy
-- small editorial restaurant-photo accents
-- simplified menu rows and text CTAs
-- Yelp, Call, and Directions links
-- no embedded map
-- EN/ES toggle
-- mobile / tablet / desktop responsive layout
-- custom favicon, Apple icon, and social-share image
-
-## Verified public business details
-- Tacos Sinaloa y Carnicería
-- 17294 Valley Blvd, Fontana, CA 92335
-- (909) 823-6253
-- 8 AM–8 PM daily
-- menu highlights used conservatively: tacos, birria, menudo, today's menu
+## Direction
+- forest green + antique gold only
+- custom taco emblem
+- Newsreader for brand and major display headings only
+- Instrument Sans for navigation, facts, body copy, and menu rows
+- reduced display scale and tracking
+- literal section naming instead of slogan-heavy copy
+- tighter vertical rhythm
+- small editorial food photography
+- Yelp, Call, and Directions actions
+- mobile CTA hidden during hero, revealed after first scroll
 
 ## Verification
-- 390px mobile: no overflow
-- 1024px tablet: no overflow
-- 1440px desktop: no overflow
-- Yelp links present
-- EN/ES toggle verified
-- green/gold identity verified
-- editorial photos intentionally capped small
-- local fonts / local site imagery
+- 390px mobile: no horizontal overflow
+- 1024px tablet: no horizontal overflow
+- 1440px desktop: no horizontal overflow
+- computed font family checks pass
+- EN/ES verified
+- Yelp links verified
+- mobile action bar behavior verified
+- green/gold-only UI tokens
+- local fonts, favicon, Apple icon, social image
