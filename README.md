@@ -1,35 +1,37 @@
-# Tacos Sinaloa y Carnicería — Owner Preview v6.3
+# Tacos Sinaloa y Carnicería — Charcoal Presentation v6.4
 
-Micro-art-direction refinement of the green/gold luxury-minimal build.
+Presentation-ready charcoal + antique-gold candidate.
 
-## Identity
-- more taco-explicit V6.3 custom mark
-- refined antique-gold tone and lighter line hierarchy
+## Art direction
+- warm charcoal field with restrained radial depth
+- antique-gold Taco Mark, typography, rules, and controls
 - Newsreader + Instrument Sans typography
-- favicon / Apple icon / social card updated to the V6.3 mark
-
-## Composition
-- two curated editorial photos instead of three
-- stronger kitchen/carnicería visual pairing
-- cleaner customer-facing menu copy
-- no duplicated third food image
+- framed Call / Directions / Yelp hero actions
+- desktop hero side-notes and diamond divider
+- two bordered restaurant-photo cards with restrained overlays
+- centered DESDE SINALOA story transition
+- business facts follow the editorial story
+- custom charcoal favicon, Apple icon, and social card
 
 ## Motion
 - Taco Mark line-draw entrance
-- wordmark waits until the mark is nearly complete
-- opposite-direction image wipes for the paired editorial photos
-- subtle hero drift/scale
-- section-rule draw
-- restrained menu hover shift
-- no scroll hijacking
-- no infinite decorative animation
-- reduced-motion fully supported
+- staged wordmark/business-info entrance
+- opposing image-mask reveals
+- subtle hero drift
+- section-rule draws
+- restrained menu hover movement
+- reduced-motion support
+- no scroll hijacking or infinite decorative animation
 
 ## Verification
-- 390px mobile / 1024px tablet / 1440px desktop: no horizontal overflow
-- hosted preview verified
+- hosted HTTP 200
+- 390px mobile / 1024px tablet / 1440px desktop: no overflow
 - no browser page errors
-- no hidden animated content after fallback
-- reduced-motion leaves all logo paths visible
+- no hidden animated content
 - EN/ES verified
+- mobile CTA hidden during hero, visible after hero
 - four Yelp links verified
+
+## Versions
+- main and charcoal-v6.4: charcoal presentation candidate
+- green-v6.3: preserved green presentation candidate
