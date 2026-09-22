@@ -1,34 +1,53 @@
-# Tacos Sinaloa Y Carniceria — Place Gallery v6.8
+# Tacos Sinaloa Y Carniceria — Production v6.8.1
 
-Charcoal/gold presentation with a compact physical-place gallery added above Visit.
+Permanent production deployment for the audited charcoal/gold Tacos Sinaloa site.
 
-## v6.8 addition
-- one exact-address Valley Blvd storefront image used as the large anchor
-- storefront explicitly labeled Prior signage / Letrero anterior
-- two supporting current-listing images: prepared food + carnicería
-- compact three-image editorial layout; no new long-form copy
-- gallery remains bilingual and reduced-motion safe
+## Production URL
 
-## Gallery layout
-- desktop: one wide storefront card + two stacked supporting cards
-- mobile: storefront spans full width + two supporting cards beneath
-- all images lazy-load in the lower-page gallery
-- captions use the existing charcoal / antique-gold system
+https://tacos.pilotsalesdistribution.com/
 
-## Important photo note
-The storefront image depicts prior Taqueria San Miguel signage at the same 17294 Valley Blvd location. The site states this explicitly. Public-preview usage should still be followed by owner/licensing approval before a commercial production launch.
+## Production topology
+
+- Cloudflare authoritative DNS for pilotsalesdistribution.com
+- Dedicated named tunnel: pse-tacos
+- Tunnel ID: bbf56ecb-daf8-404a-8cff-8c2cecc2a8fa
+- Public hostname: tacos.pilotsalesdistribution.com
+- Nexus static origin: 127.0.0.1:4188
+- Origin service: tacos-sinaloa.service
+- Tunnel service: cloudflared-tacos.service
+- Both services enabled under systemd
+- No public inbound application port
+- Grid tunnel remains separate and unchanged
+
+## v6.8 gallery
+
+- exact-address storefront image with explicit Prior signage / Letrero anterior disclosure
+- prepared-food and carnicería supporting images
+- bilingual captions
+- audited Suite A address and public business information
+
+## Production metadata
+
+- canonical URL points to permanent hostname
+- og:url uses permanent hostname
+- Open Graph / Twitter social image uses an absolute permanent URL
+- JSON-LD includes permanent url and social image URL
 
 ## Verification
-- hosted HTTP 200
-- 390 / 768 / 1024 / 1440: no horizontal overflow
-- gallery image count = 3
-- all gallery images load after the section enters view
-- prior-signage disclosure verified in English and Spanish
-- exact Suite A business information preserved
-- zero page errors / failed requests / bad local responses
-- reduced-motion content remains fully visible
+
+- permanent HTTPS returns 200 through Cloudflare
+- Open Graph image returns 200
+- 390 / 768 / 1024 / 1440 production browser gauntlet passes
+- zero browser errors / failed requests
+- bilingual gallery disclosure verified
+- reduced motion verified
+- Grid remains protected by Cloudflare Access
+- Pilot Sales apex remains HTTP 200
+- temporary TryCloudflare and Forge port-18872 preview processes retired
 
 ## Preserved releases
+
 - charcoal-v6.6.1-audited
 - charcoal-v6.7-reduced
 - charcoal-v6.8-gallery
+- charcoal-v6.8.1-production
