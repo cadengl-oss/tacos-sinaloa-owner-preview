@@ -1,6 +1,6 @@
 const copy={
-  en:{menu:"Menu",call:"Call",call_now:"Call now ↗",directions:"Directions ↗",directions_short:"Directions",hours:"Hours",daily:"Monday — Sunday",location:"Location",phone:"Phone",call_menu:"Call for today's menu",intro_title:"Taquería & Carnicería",intro_copy:"Mexican food from the kitchen and a carnicería counter under one roof on Valley Blvd.",kitchen:"From the kitchen",menu_title:"Menu",menu_note:"Availability changes daily. Call to confirm today's menu.",today_menu:"Today's Menu",counter:"From the counter",counter_title:"Carnicería",counter_copy:"A neighborhood meat counter alongside the taquería. Call or stop in to ask about today's selection.",ask_counter:"Ask the counter ↗",visit:"Visit",visit_title:"Valley Blvd., Fontana"},
-  es:{menu:"Menú",call:"Llamar",call_now:"Llamar ↗",directions:"Cómo llegar ↗",directions_short:"Direcciones",hours:"Horario",daily:"Lunes — Domingo",location:"Ubicación",phone:"Teléfono",call_menu:"Llama para confirmar el menú de hoy",intro_title:"Taquería y Carnicería",intro_copy:"Comida mexicana de la cocina y una carnicería bajo un mismo techo sobre Valley Blvd.",kitchen:"Desde la cocina",menu_title:"Menú",menu_note:"La disponibilidad cambia diariamente. Llama para confirmar el menú de hoy.",today_menu:"Menú de hoy",counter:"Desde el mostrador",counter_title:"Carnicería",counter_copy:"Una carnicería del barrio junto a la taquería. Llama o visítanos para preguntar por la selección de hoy.",ask_counter:"Pregunta en mostrador ↗",visit:"Visítanos",visit_title:"Valley Blvd., Fontana"}
+  en:{choose_counter:"Choose your counter",choose_title:"Taquería / Carnicería",availability_short:"Availability changes daily. Call to confirm today’s menu.",call_kitchen:"Call kitchen ↗",today_selection:"Today’s counter selection",counter_short:"Call or stop in to ask what’s available today.",call_counter:"Call counter ↗",reviews_title:"Reviews & customer photos",reviews_copy:"See recent feedback, customer photos and updates before you visit.",menu:"Menu",call:"Call",call_now:"Call now ↗",directions:"Directions ↗",directions_short:"Directions",hours:"Hours",daily:"Monday — Sunday",location:"Location",phone:"Phone",call_menu:"Call for today's menu",intro_title:"Taquería & Carnicería",intro_copy:"Mexican food from the kitchen and a carnicería counter under one roof on Valley Blvd.",kitchen:"From the kitchen",menu_title:"Menu",menu_note:"Availability changes daily. Call to confirm today's menu.",today_menu:"Today's Menu",counter:"From the counter",counter_title:"Carnicería",counter_copy:"A neighborhood meat counter alongside the taquería. Call or stop in to ask about today's selection.",ask_counter:"Ask the counter ↗",visit:"Visit",visit_title:"Valley Blvd., Fontana"},
+  es:{choose_counter:"Elige tu mostrador",choose_title:"¿Taquería o Carnicería?",availability_short:"La disponibilidad cambia diariamente. Llama para confirmar el menú de hoy.",call_kitchen:"Llamar a cocina ↗",today_selection:"Selección de hoy",counter_short:"Llama o visítanos para preguntar qué hay disponible hoy.",call_counter:"Llamar al mostrador ↗",reviews_title:"Reseñas y fotos de clientes",reviews_copy:"Mira comentarios recientes, fotos de clientes y novedades antes de visitarnos.",menu:"Menú",call:"Llamar",call_now:"Llamar ↗",directions:"Cómo llegar ↗",directions_short:"Direcciones",hours:"Horario",daily:"Lunes — Domingo",location:"Ubicación",phone:"Teléfono",call_menu:"Llama para confirmar el menú de hoy",intro_title:"Taquería y Carnicería",intro_copy:"Comida mexicana de la cocina y una carnicería bajo un mismo techo sobre Valley Blvd.",kitchen:"Desde la cocina",menu_title:"Menú",menu_note:"La disponibilidad cambia diariamente. Llama para confirmar el menú de hoy.",today_menu:"Menú de hoy",counter:"Desde el mostrador",counter_title:"Carnicería",counter_copy:"Una carnicería del barrio junto a la taquería. Llama o visítanos para preguntar por la selección de hoy.",ask_counter:"Pregunta en mostrador ↗",visit:"Visítanos",visit_title:"Valley Blvd., Fontana"}
 };
 let lang="en";
 const toggle=document.querySelector(".language-toggle");
@@ -75,3 +75,76 @@ if(motionOK){
     sections.forEach(el=>el.classList.add("is-motion-visible"));
   },1800);
 }
+
+const counterTabs=[...document.querySelectorAll(".counter-tab")];
+const counterPanels=[...document.querySelectorAll(".counter-panel")];
+const counterTabList=document.querySelector(".counter-tabs");
+
+function setCounter(index,focus=false){
+  const previous=counterTabs.findIndex(tab=>tab.getAttribute("aria-selected")==="true");
+  if(previous===index){
+    if(focus)counterTabs[index].focus();
+    return;
+  }
+  counterTabs.forEach((tab,i)=>{
+    const active=i===index;
+    tab.classList.toggle("is-active",active);
+    tab.setAttribute("aria-selected",active?"true":"false");
+    tab.tabIndex=active?0:-1;
+  });
+  counterPanels.forEach((panel,i)=>{
+    panel.hidden=i!==index;
+    panel.classList.toggle("is-active",i===index);
+    if(i===index)panel.querySelectorAll("[data-motion]").forEach(el=>el.classList.add("is-visible"));
+  });
+  if(counterTabList)counterTabList.dataset.active=String(index);
+
+  const panel=counterPanels[index];
+  const motionAllowed=!matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(panel&&motionAllowed&&previous!==-1){
+    const direction=index>previous?1:-1;
+    const media=panel.querySelector(".counter-panel-media");
+    const copy=panel.querySelector(".counter-panel-copy");
+    panel.classList.add("is-switching-in");
+    if(media)media.animate([
+      {clipPath:direction>0?"inset(0 0 0 100%)":"inset(0 100% 0 0)"},
+      {clipPath:"inset(0 0 0 0)"}
+    ],{duration:360,easing:"cubic-bezier(.65,0,.25,1)",fill:"both"});
+    if(copy)copy.animate([
+      {opacity:.35,transform:"translateY(7px)"},
+      {opacity:1,transform:"translateY(0)"}
+    ],{duration:300,easing:"cubic-bezier(.2,.7,.2,1)"});
+    setTimeout(()=>panel.classList.remove("is-switching-in"),380);
+  }
+  if(focus)counterTabs[index].focus();
+}
+counterTabs.forEach((tab,index)=>{
+  tab.addEventListener("click",()=>setCounter(index));
+  tab.addEventListener("keydown",e=>{
+    if(e.key==="ArrowRight"||e.key==="ArrowLeft"){
+      e.preventDefault();
+      const delta=e.key==="ArrowRight"?1:-1;
+      const next=(index+delta+counterTabs.length)%counterTabs.length;
+      setCounter(next,true);
+    }
+    if(e.key==="Home"){e.preventDefault();setCounter(0,true)}
+    if(e.key==="End"){e.preventDefault();setCounter(counterTabs.length-1,true)}
+  });
+});
+setCounter(0);
+
+function renderStatus(){
+  const el=document.getElementById("liveStatus");
+  if(!el)return;
+  const parts=new Intl.DateTimeFormat("en-US",{timeZone:"America/Los_Angeles",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+  const hour=Number(parts.find(p=>p.type==="hour")?.value||0);
+  const minute=Number(parts.find(p=>p.type==="minute")?.value||0);
+  const mins=hour*60+minute;
+  const open=mins>=480&&mins<1200;
+  if(lang==="es")el.textContent=open?"ABIERTO AHORA · HASTA LAS 8 PM":"CERRADO · ABRE A LAS 8 AM";
+  else el.textContent=open?"OPEN NOW · UNTIL 8 PM":"CLOSED · OPENS AT 8 AM";
+}
+renderStatus();
+setInterval(renderStatus,60000);
+const oldRenderLanguage=renderLanguage;
+renderLanguage=function(){oldRenderLanguage();renderStatus()};

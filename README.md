@@ -1,37 +1,39 @@
-# Tacos Sinaloa y Carnicería — Charcoal Presentation v6.4
+# Tacos Sinaloa y Carnicería — Charcoal Hardened v6.5
 
-Presentation-ready charcoal + antique-gold candidate.
+Charcoal + antique-gold presentation with a useful interactive counter selector.
 
-## Art direction
-- warm charcoal field with restrained radial depth
-- antique-gold Taco Mark, typography, rules, and controls
-- Newsreader + Instrument Sans typography
-- framed Call / Directions / Yelp hero actions
-- desktop hero side-notes and diamond divider
-- two bordered restaurant-photo cards with restrained overlays
-- centered DESDE SINALOA story transition
-- business facts follow the editorial story
-- custom charcoal favicon, Apple icon, and social card
+## New in v6.5
+- semantic Taquería / Carnicería selector
+- one image at a time instead of two simultaneous cards
+- live Open / Closed status using America/Los_Angeles time
+- keyboard-operable tabs with ArrowLeft / ArrowRight / Home / End
+- directional image wipe and restrained copy settle on tab switch
+- stable selector height across mobile / tablet / desktop
+- duplicate standalone Carnicería section removed
+- compact Yelp trust block added near Visit
+- mobile action bar reduced and safe-area aware
 
-## Motion
-- Taco Mark line-draw entrance
-- staged wordmark/business-info entrance
-- opposing image-mask reveals
-- subtle hero drift
-- section-rule draws
-- restrained menu hover movement
+## Existing identity
+- charcoal + antique gold
+- V6.3 Taco Mark
+- Newsreader + Instrument Sans
+- Taco Mark line-draw hero entrance
+- Call / Directions / Yelp actions
+- EN / ES
 - reduced-motion support
-- no scroll hijacking or infinite decorative animation
 
 ## Verification
-- hosted HTTP 200
-- 390px mobile / 1024px tablet / 1440px desktop: no overflow
+- 390px mobile: no overflow
+- 768px tablet: no overflow
+- 1440px desktop: no overflow
+- tab state and keyboard focus verified
+- selector height stable within 3px
+- live status bilingual
+- reduced-motion leaves all content visible
 - no browser page errors
-- no hidden animated content
-- EN/ES verified
-- mobile CTA hidden during hero, visible after hero
-- four Yelp links verified
+- five Yelp links verified
 
-## Versions
-- main and charcoal-v6.4: charcoal presentation candidate
-- green-v6.3: preserved green presentation candidate
+## Preserved versions
+- green-v6.3
+- charcoal-v6.4
+- charcoal-v6.5-hardened / main

@@ -68,22 +68,56 @@
 
 
   <section class="intro-section" data-motion-section>
-    <div class="section-copy" data-motion="reveal">
-      <span class="eyebrow">DESDE SINALOA</span>
-      <h2 data-i18n="intro_title">Taquería &amp; Carnicería</h2>
-      <p data-i18n="intro_copy">Taquería, carnicería and Mexican cooking on Valley Blvd. in Fontana.</p>
-    </div>
-    <div class="editorial-gallery" aria-label="Restaurant photography">
-      <figure class="editorial-photo editorial-one" data-motion="image">
-        <span class="photo-card-label">AUTÉNTICOS<br/>TACOS</span>
-        <img src="./assets/tacos-hero.jpg" alt="Tacos from the restaurant" loading="lazy" />
-        <figcaption><span>TAQUERÍA · FONTANA</span><b aria-hidden="true">→</b></figcaption>
-      </figure>
-      <figure class="editorial-photo editorial-two" data-motion="image">
-        <span class="photo-card-label">CARNES<br/>DE CALIDAD</span>
-        <img src="./assets/carniceria.jpg" alt="Carnicería counter" loading="lazy" />
-        <figcaption><span>CARNICERÍA · FONTANA</span><b aria-hidden="true">→</b></figcaption>
-      </figure>
+    <div class="counter-switcher">
+      <div class="counter-switcher-head" data-motion="reveal">
+        <div>
+          <span class="eyebrow" data-i18n="choose_counter">Choose your counter</span>
+          <h2 data-i18n="choose_title">Taquería / Carnicería</h2>
+        </div>
+        <div class="live-status" id="liveStatus" aria-live="polite">Checking hours…</div>
+      </div>
+
+      <div class="counter-tabs" role="tablist" aria-label="Choose Taquería or Carnicería">
+        <button class="counter-tab is-active" id="tab-taqueria" role="tab" aria-selected="true" aria-controls="panel-taqueria" tabindex="0">TAQUERÍA</button>
+        <button class="counter-tab" id="tab-carniceria" role="tab" aria-selected="false" aria-controls="panel-carniceria" tabindex="-1">CARNICERÍA</button>
+        <span class="counter-tab-indicator" aria-hidden="true"></span>
+      </div>
+
+      <div class="counter-stage">
+        <article class="counter-panel is-active" id="panel-taqueria" role="tabpanel" aria-labelledby="tab-taqueria">
+          <figure class="counter-panel-media" data-motion="image">
+            <img src="./assets/tacos-hero.jpg" alt="Tacos from the restaurant" loading="lazy" />
+            <figcaption>TAQUERÍA · FONTANA</figcaption>
+          </figure>
+          <div class="counter-panel-copy" data-motion="reveal">
+            <span class="eyebrow" data-i18n="kitchen">From the kitchen</span>
+            <h3>Taquería</h3>
+            <p class="counter-highlights">Tacos · Birria · Menudo</p>
+            <p class="counter-note" data-i18n="availability_short">Availability changes daily. Call to confirm today’s menu.</p>
+            <a class="counter-cta" href="tel:+19098236253" data-i18n="call_kitchen">Call kitchen ↗</a>
+          </div>
+        </article>
+
+        <article class="counter-panel" id="panel-carniceria" role="tabpanel" aria-labelledby="tab-carniceria" hidden>
+          <figure class="counter-panel-media" data-motion="image">
+            <img src="./assets/carniceria.jpg" alt="Carnicería counter" loading="lazy" />
+            <figcaption>CARNICERÍA · FONTANA</figcaption>
+          </figure>
+          <div class="counter-panel-copy" data-motion="reveal">
+            <span class="eyebrow" data-i18n="counter">From the counter</span>
+            <h3>Carnicería</h3>
+            <p class="counter-highlights" data-i18n="today_selection">Today’s counter selection</p>
+            <p class="counter-note" data-i18n="counter_short">Call or stop in to ask what’s available today.</p>
+            <a class="counter-cta" href="tel:+19098236253" data-i18n="call_counter">Call counter ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="brand-bridge" data-motion="reveal">
+        <span></span>
+        <b>DESDE SINALOA · FONTANA, CALIFORNIA</b>
+        <span></span>
+      </div>
     </div>
   </section>
 
@@ -119,17 +153,14 @@
     </div>
   </section>
 
-  <section class="counter-section" id="carniceria" data-motion-section>
-    <div class="section-copy" data-motion="reveal">
-      <span class="eyebrow" data-i18n="counter">From the counter</span>
-      <h2 data-i18n="counter_title">Carnicería</h2>
-      <p data-i18n="counter_copy">A neighborhood meat counter alongside the taquería. Call or stop in to ask about today's selection.</p>
-      <a class="text-link" href="tel:+19098236253" data-i18n="ask_counter">Ask the counter ↗</a>
+
+  <section class="review-block" data-motion-section data-motion="reveal">
+    <div class="review-copy">
+      <span class="eyebrow">YELP</span>
+      <h2 data-i18n="reviews_title">Reviews &amp; customer photos</h2>
+      <p data-i18n="reviews_copy">See recent feedback, customer photos and updates before you visit.</p>
     </div>
-    <figure class="counter-photo" data-motion="image">
-      <img src="./assets/carniceria.jpg" alt="Meat counter at Tacos Sinaloa y Carnicería" loading="lazy" />
-      <figcaption>CARNICERÍA / FONTANA</figcaption>
-    </figure>
+    <a class="review-link" href="https://www.yelp.com/search?find_desc=Tacos%20Sinaloa%20Y%20Carniceria&find_loc=17294%20Valley%20Blvd%2C%20Fontana%2C%20CA%2092335" target="_blank" rel="noreferrer">View on Yelp ↗</a>
   </section>
 
   <section class="visit-section" id="visit" data-motion-section data-motion="reveal">
