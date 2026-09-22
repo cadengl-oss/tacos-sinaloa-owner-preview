@@ -93,7 +93,7 @@
       <div class="counter-stage">
         <article class="counter-panel is-active" id="panel-taqueria" role="tabpanel" aria-labelledby="tab-taqueria">
           <figure class="counter-panel-media" data-motion="image">
-            <img src="./assets/tacos-hero.jpg" alt="Tacos from the restaurant" width="675" height="900" loading="lazy" decoding="async" />
+            <img src="./assets/tacos-hero.jpg" alt="Tacos from the restaurant" width="675" height="900" loading="eager" fetchpriority="low" decoding="async" />
             <figcaption>TAQUERÍA · FONTANA</figcaption>
           </figure>
           <div class="counter-panel-copy" data-motion="reveal">
@@ -146,25 +146,27 @@
     </div>
   </section>
 
-  <section class="menu-section" id="menu" data-motion-section>
-    <header class="section-heading" data-motion="reveal">
-      <span class="eyebrow" data-i18n="kitchen">From the kitchen</span>
-      <h2 data-i18n="menu_title">Menu</h2>
+  <section class="menu-compact" id="menu" data-motion-section>
+    <div class="menu-compact-head" data-motion="reveal">
+      <div>
+        <span class="eyebrow" data-i18n="kitchen">From the kitchen</span>
+        <h2 data-i18n="menu_title">Menu</h2>
+      </div>
       <p data-i18n="menu_note">Call to confirm today's menu and availability.</p>
-    </header>
-    <div class="menu-list">
-      <a class="menu-row" data-motion="reveal" href="tel:+19098236253"><span>01</span><strong>Tacos</strong></a>
-      <a class="menu-row" data-motion="reveal" href="tel:+19098236253"><span>02</span><strong>Birria</strong></a>
-      <a class="menu-row" data-motion="reveal" href="tel:+19098236253"><span>03</span><strong>Menudo</strong></a>
-      <a class="menu-row" data-motion="reveal" href="tel:+19098236253"><span>04</span><strong data-i18n="today_menu">Today's Menu</strong></a>
+    </div>
+    <div class="menu-compact-items" aria-label="Menu highlights">
+      <a class="menu-row menu-chip" data-motion="reveal" href="tel:+19098236253"><span>01</span><strong>Tacos</strong></a>
+      <a class="menu-row menu-chip" data-motion="reveal" href="tel:+19098236253"><span>02</span><strong>Birria</strong></a>
+      <a class="menu-row menu-chip" data-motion="reveal" href="tel:+19098236253"><span>03</span><strong>Menudo</strong></a>
+      <a class="menu-row menu-chip" data-motion="reveal" href="tel:+19098236253"><span>04</span><strong data-i18n="today_menu">Today's Menu</strong></a>
     </div>
   </section>
 
 
-  <section class="review-block" data-motion-section data-motion="reveal">
-    <div class="review-copy">
+  <section class="review-strip" data-motion-section data-motion="reveal">
+    <div class="review-strip-copy">
       <span class="eyebrow">YELP</span>
-      <h2 data-i18n="reviews_title">Reviews &amp; customer photos</h2>
+      <strong data-i18n="reviews_title">Reviews &amp; customer photos</strong>
       <p data-i18n="reviews_copy">See recent feedback, customer photos and updates before you visit.</p>
     </div>
     <a class="review-link" href="https://www.yelp.com/search?find_desc=Tacos%20Sinaloa%20Y%20Carniceria&find_loc=17294%20Valley%20Blvd%2C%20Fontana%2C%20CA%2092335" target="_blank" rel="noreferrer">View on Yelp ↗</a>
