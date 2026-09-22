@@ -1,0 +1,22 @@
+{
+  "_status": "OWNER_APPROVAL_REQUIRED",
+  "_instructions": "Replace examples only with owner-approved current menu data before wiring this file to production.",
+  "categories": [
+    {
+      "id": "category-id",
+      "name_en": "Category",
+      "name_es": "Categoría",
+      "items": [
+        {
+          "id": "item-id",
+          "name_en": "Item",
+          "name_es": "Artículo",
+          "description_en": "",
+          "description_es": "",
+          "price": null,
+          "availability": "confirm_with_owner"
+        }
+      ]
+    }
+  ]
+}

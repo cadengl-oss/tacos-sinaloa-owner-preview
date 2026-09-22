@@ -3,6 +3,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import os
 from urllib.parse import urlparse
+import json
 
 ROOT = Path(__file__).resolve().parent
 HOST = os.environ.get("HOST", "127.0.0.1")
@@ -37,11 +38,42 @@ class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(ROOT), **kwargs)
 
+    def _health_payload(self):
+        return json.dumps({
+            "status": "ok",
+            "service": "tacos-sinaloa",
+            "release": "v6.9.1"
+        }, separators=(",", ":")).encode("utf-8")
+
+    def _send_health(self, include_body=True):
+        payload = self._health_payload()
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(payload)))
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        if include_body:
+            self.wfile.write(payload)
+
+    def do_GET(self):
+        if urlparse(self.path).path == "/healthz":
+            self._send_health(include_body=True)
+            return
+        super().do_GET()
+
+    def do_HEAD(self):
+        if urlparse(self.path).path == "/healthz":
+            self._send_health(include_body=False)
+            return
+        super().do_HEAD()
+
     def end_headers(self):
         path = urlparse(self.path).path
         suffix = Path(path).suffix.lower()
 
-        if path in {"/", "/index.html"} or suffix in {".html", ""}:
+        if path == "/healthz":
+            pass
+        elif path in {"/", "/index.html"} or suffix in {".html", ""}:
             self.send_header("Cache-Control", "no-cache, max-age=0, must-revalidate")
         elif suffix in {".css", ".js", ".json", ".xml", ".txt", ".webmanifest"}:
             self.send_header("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400")

@@ -1,0 +1,15 @@
+[Unit]
+Description=Tacos Sinaloa production health check
+After=network-online.target tacos-sinaloa.service cloudflared-tacos.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/libexec/pse/tacos-sinaloa-healthcheck
+User=root
+Group=root
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/pse
