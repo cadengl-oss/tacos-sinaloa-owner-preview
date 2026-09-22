@@ -1,31 +1,35 @@
-# Tacos Sinaloa y Carnicería — Owner Preview v6.2
+# Tacos Sinaloa y Carnicería — Owner Preview v6.3
 
-Professional logo + motion refinement.
+Micro-art-direction refinement of the green/gold luxury-minimal build.
 
 ## Identity
-- more taco-explicit custom Taco Mark with open shell and layered filling edge
-- forest green + antique gold only
+- more taco-explicit V6.3 custom mark
+- refined antique-gold tone and lighter line hierarchy
 - Newsreader + Instrument Sans typography
-- small editorial food photography
-- Yelp, Call, and Directions actions
+- favicon / Apple icon / social card updated to the V6.3 mark
+
+## Composition
+- two curated editorial photos instead of three
+- stronger kitchen/carnicería visual pairing
+- cleaner customer-facing menu copy
+- no duplicated third food image
 
 ## Motion
-- sequenced hero entrance
-- subtle hero drift/scale on scroll
-- masked photo reveals with tiny image settle
-- gold section-rule draw
-- restrained menu text movement
-- no smooth-scroll hijacking
+- Taco Mark line-draw entrance
+- wordmark waits until the mark is nearly complete
+- opposite-direction image wipes for the paired editorial photos
+- subtle hero drift/scale
+- section-rule draw
+- restrained menu hover shift
+- no scroll hijacking
 - no infinite decorative animation
-- reduced-motion opt-out
-- visibility fallback after 1.8s
+- reduced-motion fully supported
 
 ## Verification
-- 390px mobile / 1024px tablet / 1440px desktop: no overflow
-- hosted motion state verified
-- no page errors
-- all reveal content forced visible after fallback
-- reduced-motion leaves all content visible
+- 390px mobile / 1024px tablet / 1440px desktop: no horizontal overflow
+- hosted preview verified
+- no browser page errors
+- no hidden animated content after fallback
+- reduced-motion leaves all logo paths visible
 - EN/ES verified
-- Yelp links verified
-- favicon, Apple icon, and social image updated to v6.2 mark
+- four Yelp links verified
