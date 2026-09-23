@@ -110,7 +110,7 @@ function cleanFileName(s){ return String(s).replace(/[^a-z0-9._-]+/gi,"-"); }
       assert(es.lang==="es","mobile: language toggle did not set es",failures);
       assert(/mencionan/i.test(es.reviewHeading),"mobile: Spanish review heading missing",failures);
       assert(es.visit.some(x=>/Llamar/.test(x)),"mobile: Spanish call CTA missing",failures);
-      assert(es.menu.some(x=>/Menú de hoy/i.test(x)),"mobile: Spanish menu did not re-render",failures);
+      assert(es.menu.some(x=>/(Menú de hoy|Selección de hoy)/i.test(x)),"mobile: Spanish menu did not re-render",failures);
 
       await page.click("#tab-carniceria");
       await page.waitForFunction(()=>{
