@@ -8,6 +8,7 @@ import json
 ROOT = Path(__file__).resolve().parent
 HOST = os.environ.get("HOST", "127.0.0.1")
 PORT = int(os.environ.get("PORT", "4188"))
+SITE_ENV = os.environ.get("SITE_ENV", "production").strip().lower()
 
 CSP = (
     "default-src 'self'; "
@@ -79,8 +80,12 @@ class Handler(SimpleHTTPRequestHandler):
             self.send_header("Cache-Control", "no-cache, max-age=0, must-revalidate")
         elif suffix in {".css", ".js", ".json", ".xml", ".txt", ".webmanifest"}:
             self.send_header("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400")
-        elif suffix in {".jpg", ".jpeg", ".png", ".svg", ".ico", ".ttf", ".woff", ".woff2"}:
+        elif suffix in {".jpg", ".jpeg", ".png", ".webp", ".svg", ".ico", ".ttf", ".woff", ".woff2"}:
             self.send_header("Cache-Control", "public, max-age=604800, stale-while-revalidate=86400")
+
+        if SITE_ENV == "staging":
+            self.send_header("X-Robots-Tag", "noindex, nofollow, noarchive")
+            self.send_header("X-PSE-Environment", "staging")
 
         self.send_header("Content-Security-Policy", CSP)
         self.send_header("Strict-Transport-Security", "max-age=31536000; includeSubDomains")
