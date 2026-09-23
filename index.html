@@ -169,13 +169,20 @@
   </section>
 
 
-  <section class="review-strip" data-motion-section data-motion="reveal">
-    <div class="review-strip-copy">
-      <span class="eyebrow">YELP</span>
-      <strong data-i18n="reviews_title">Reviews &amp; customer photos</strong>
-      <p data-i18n="reviews_copy">See recent feedback, customer photos and updates before you visit.</p>
+  <section class="review-section" data-motion-section data-motion="reveal" aria-labelledby="reviews-heading">
+    <div class="review-strip-head">
+      <div class="review-strip-copy">
+        <span class="eyebrow" data-i18n="reviews_eyebrow">CUSTOMER NOTES</span>
+        <strong id="reviews-heading" data-i18n="reviews_title">What customers mention</strong>
+        <p data-i18n="reviews_copy">Recent public feedback with the source and date shown.</p>
+      </div>
+      <div class="review-actions">
+        <a class="review-link" href="https://www.google.com/maps/search/?api=1&amp;query=Tacos+Sinaloa+Y+Carniceria+17294+Valley+Blvd+Fontana+CA+92335" target="_blank" rel="noreferrer">Google ↗</a>
+        <a class="review-link review-link-secondary" href="https://www.yelp.com/search?find_desc=Tacos%20Sinaloa%20Y%20Carniceria&amp;find_loc=17294%20Valley%20Blvd%2C%20Fontana%2C%20CA%2092335" target="_blank" rel="noreferrer">Yelp ↗</a>
+      </div>
     </div>
-    <a class="review-link" href="https://www.yelp.com/search?find_desc=Tacos%20Sinaloa%20Y%20Carniceria&find_loc=17294%20Valley%20Blvd%2C%20Fontana%2C%20CA%2092335" target="_blank" rel="noreferrer">View on Yelp ↗</a>
+    <div class="review-items" id="reviewItems" data-review-state="fallback" aria-label="Recent customer feedback"></div>
+    <p class="review-source-note" data-i18n="reviews_note">Review text is paraphrased. No aggregate rating is stored on this site.</p>
   </section>
 
   <section class="place-gallery" data-motion-section>
@@ -253,6 +260,6 @@
   "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"}]
 }
 </script>
-<script src="./script.js?v=20260922-v610"></script>
+<script src="./script.js?v=20260922-v611"></script>
 </body>
 </html>

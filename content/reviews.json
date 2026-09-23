@@ -1,0 +1,38 @@
+{
+  "_publication_status": "PUBLISHED",
+  "_source": "Google public reviews",
+  "_retrieved_on": "2026-09-22",
+  "_policy": "Paraphrased review themes only. No aggregate rating is stored.",
+  "items": [
+    {
+      "id": "emma-d-2026-01-19",
+      "reviewer": "Emma D",
+      "source": "Google",
+      "source_date": "2026-01-19",
+      "text_en": "Quick lunch service, delicious food, friendly staff, and generous portions for the price.",
+      "text_es": "Servicio rápido a la hora del almuerzo, comida deliciosa, personal amable y porciones generosas por el precio.",
+      "source_url": "https://www.google.com/maps/search/?api=1&query=Tacos+Sinaloa+Y+Carniceria+17294+Valley+Blvd+Fontana+CA+92335",
+      "evidence_url": "https://menutuff.com/mexican-restaurants/tacos-sinaloa-y-carniceria-8606"
+    },
+    {
+      "id": "loren-daze-2026-02-17",
+      "reviewer": "Loren Daze",
+      "source": "Google",
+      "source_date": "2026-02-17",
+      "text_en": "Called the quesabirria tacos one of the best in the area.",
+      "text_es": "Destacó los tacos de quesabirria como unos de los mejores de la zona.",
+      "source_url": "https://www.google.com/maps/search/?api=1&query=Tacos+Sinaloa+Y+Carniceria+17294+Valley+Blvd+Fontana+CA+92335",
+      "evidence_url": "https://menutuff.com/mexican-restaurants/tacos-sinaloa-y-carniceria-8606"
+    },
+    {
+      "id": "rc-2026-02-09",
+      "reviewer": "R C",
+      "source": "Google",
+      "source_date": "2026-02-09",
+      "text_en": "Praised the birria, menudo, tacos dorados, and the flavor of the hot sauce.",
+      "text_es": "Elogió la birria, el menudo, los tacos dorados y el sabor de la salsa picante.",
+      "source_url": "https://www.google.com/maps/search/?api=1&query=Tacos+Sinaloa+Y+Carniceria+17294+Valley+Blvd+Fontana+CA+92335",
+      "evidence_url": "https://menutuff.com/mexican-restaurants/tacos-sinaloa-y-carniceria-8606"
+    }
+  ]
+}

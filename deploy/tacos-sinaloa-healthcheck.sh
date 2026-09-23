@@ -22,6 +22,8 @@ check_code "$PUBLIC_BASE/healthz"
 check_code "$PUBLIC_BASE/robots.txt"
 check_code "$PUBLIC_BASE/sitemap.xml"
 check_code "$PUBLIC_BASE/favicon.ico"
+check_code "$PUBLIC_BASE/content/menu.json"
+check_code "$PUBLIC_BASE/content/reviews.json"
 
 curl -fsSI --connect-timeout 5 --max-time 15 "$PUBLIC_BASE/" >"$TMP_HEADERS"
 for header in   "content-security-policy:"   "strict-transport-security:"   "x-content-type-options:"   "x-frame-options:"   "referrer-policy:"   "permissions-policy:"; do

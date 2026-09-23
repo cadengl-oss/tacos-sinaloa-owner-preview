@@ -1,4 +1,4 @@
-# Tacos Sinaloa Y Carniceria — Production v6.10
+# Tacos Sinaloa Y Carniceria — Production v6.11
 
 Permanent production deployment for the audited charcoal/gold Tacos Sinaloa site.
 
@@ -59,6 +59,15 @@ https://tacos.pilotsalesdistribution.com/
 - `tools/validate-menu.py` rejects duplicate/malformed items and blocks prices unless `_owner_approved` is explicitly true
 - current production content remains the same four no-price highlights; no third-party prices were promoted
 
+## Sourced social proof — v6.11
+
+- compact recent-review module with three paraphrased public Google review themes
+- every published review item carries reviewer, source date, source URL, and provenance URL
+- no aggregate star rating is stored, avoiding stale score claims
+- EN/ES review text is rendered from `content/reviews.json`
+- review JSON is no-cache and covered by the production health check
+- `tools/validate-reviews.py` rejects stale/future dates, missing provenance, insecure URLs, duplicate IDs, and frozen rating metadata
+
 ## Verification
 
 - permanent HTTPS returns 200 through Cloudflare
@@ -85,3 +94,4 @@ https://tacos.pilotsalesdistribution.com/
 - charcoal-v6.9-production
 - charcoal-v6.9.1-production
 - charcoal-v6.10-production
+- charcoal-v6.11-production

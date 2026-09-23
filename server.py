@@ -42,7 +42,7 @@ class Handler(SimpleHTTPRequestHandler):
         return json.dumps({
             "status": "ok",
             "service": "tacos-sinaloa",
-            "release": "v6.10"
+            "release": "v6.11"
         }, separators=(",", ":")).encode("utf-8")
 
     def _send_health(self, include_body=True):
@@ -73,7 +73,7 @@ class Handler(SimpleHTTPRequestHandler):
 
         if path == "/healthz":
             pass
-        elif path == "/content/menu.json":
+        elif path in {"/content/menu.json", "/content/reviews.json"}:
             self.send_header("Cache-Control", "no-cache, max-age=0, must-revalidate")
         elif path in {"/", "/index.html"} or suffix in {".html", ""}:
             self.send_header("Cache-Control", "no-cache, max-age=0, must-revalidate")

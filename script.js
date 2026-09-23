@@ -1,6 +1,6 @@
 const copy={
-  en:{shop_eyebrow:"THE SHOP",shop_title:"At the shop",shop_copy:"A look at the Valley Blvd location, the kitchen and the carnicería.",shop_storefront:"Valley Blvd storefront",shop_prior:"Prior signage",shop_kitchen:"From the kitchen",shop_counter:"Carnicería",shop_counter_note:"From the counter",choose_counter:"Choose your counter",choose_title:"Taquería / Carnicería",availability_short:"Call to confirm today’s menu and availability.",call_kitchen:"Call restaurant ↗",today_selection:"Today’s counter selection",counter_short:"Call or stop in to ask what’s available today.",call_counter:"Call restaurant ↗",reviews_title:"Reviews & customer photos",reviews_copy:"See recent feedback, customer photos and updates before you visit.",service_note:"Dine-in · Takeout",menu:"Menu",call:"Call",call_now:"Call now ↗",directions:"Directions ↗",directions_short:"Directions",hours:"Hours",daily:"Monday — Sunday",location:"Location",phone:"Phone",call_menu:"Call for today's menu",intro_title:"Taquería & Carnicería",intro_copy:"Mexican food from the kitchen and a carnicería counter under one roof on Valley Blvd.",kitchen:"From the kitchen",menu_title:"Menu",menu_note:"Call to confirm today's menu and availability.",today_menu:"Today's Menu",counter:"From the counter",counter_title:"Carnicería",counter_copy:"A neighborhood meat counter alongside the taquería. Call or stop in to ask about today's selection.",ask_counter:"Ask the counter ↗",visit:"Visit",visit_title:"Valley Blvd., Fontana"},
-  es:{shop_eyebrow:"EL LOCAL",shop_title:"En el local",shop_copy:"Una mirada al local de Valley Blvd, la cocina y la carnicería.",shop_storefront:"Fachada de Valley Blvd",shop_prior:"Letrero anterior",shop_kitchen:"Desde la cocina",shop_counter:"Carnicería",shop_counter_note:"Desde el mostrador",choose_counter:"Elige tu mostrador",choose_title:"Taquería / Carnicería",availability_short:"Llama para confirmar el menú y la disponibilidad de hoy.",call_kitchen:"Llamar al restaurante ↗",today_selection:"Selección de hoy",counter_short:"Llama o visítanos para preguntar qué hay disponible hoy.",call_counter:"Llamar al restaurante ↗",reviews_title:"Reseñas y fotos de clientes",reviews_copy:"Mira comentarios recientes, fotos de clientes y novedades antes de visitarnos.",service_note:"Comer aquí · Para llevar",menu:"Menú",call:"Llamar",call_now:"Llamar ↗",directions:"Cómo llegar ↗",directions_short:"Direcciones",hours:"Horario",daily:"Lunes — Domingo",location:"Ubicación",phone:"Teléfono",call_menu:"Llama para confirmar el menú de hoy",intro_title:"Taquería y Carnicería",intro_copy:"Comida mexicana de la cocina y una carnicería bajo un mismo techo sobre Valley Blvd.",kitchen:"Desde la cocina",menu_title:"Menú",menu_note:"Llama para confirmar el menú y la disponibilidad de hoy.",today_menu:"Menú de hoy",counter:"Desde el mostrador",counter_title:"Carnicería",counter_copy:"Una carnicería del barrio junto a la taquería. Llama o visítanos para preguntar por la selección de hoy.",ask_counter:"Pregunta en mostrador ↗",visit:"Visítanos",visit_title:"Valley Blvd., Fontana"}
+  en:{shop_eyebrow:"THE SHOP",shop_title:"At the shop",shop_copy:"A look at the Valley Blvd location, the kitchen and the carnicería.",shop_storefront:"Valley Blvd storefront",shop_prior:"Prior signage",shop_kitchen:"From the kitchen",shop_counter:"Carnicería",shop_counter_note:"From the counter",choose_counter:"Choose your counter",choose_title:"Taquería / Carnicería",availability_short:"Call to confirm today’s menu and availability.",call_kitchen:"Call restaurant ↗",today_selection:"Today’s counter selection",counter_short:"Call or stop in to ask what’s available today.",call_counter:"Call restaurant ↗",reviews_eyebrow:"CUSTOMER NOTES",reviews_title:"What customers mention",reviews_copy:"Recent public feedback with the source and date shown.",reviews_note:"Review text is paraphrased. No aggregate rating is stored on this site.",service_note:"Dine-in · Takeout",menu:"Menu",call:"Call",call_now:"Call now ↗",directions:"Directions ↗",directions_short:"Directions",hours:"Hours",daily:"Monday — Sunday",location:"Location",phone:"Phone",call_menu:"Call for today's menu",intro_title:"Taquería & Carnicería",intro_copy:"Mexican food from the kitchen and a carnicería counter under one roof on Valley Blvd.",kitchen:"From the kitchen",menu_title:"Menu",menu_note:"Call to confirm today's menu and availability.",today_menu:"Today's Menu",counter:"From the counter",counter_title:"Carnicería",counter_copy:"A neighborhood meat counter alongside the taquería. Call or stop in to ask about today's selection.",ask_counter:"Ask the counter ↗",visit:"Visit",visit_title:"Valley Blvd., Fontana"},
+  es:{shop_eyebrow:"EL LOCAL",shop_title:"En el local",shop_copy:"Una mirada al local de Valley Blvd, la cocina y la carnicería.",shop_storefront:"Fachada de Valley Blvd",shop_prior:"Letrero anterior",shop_kitchen:"Desde la cocina",shop_counter:"Carnicería",shop_counter_note:"Desde el mostrador",choose_counter:"Elige tu mostrador",choose_title:"Taquería / Carnicería",availability_short:"Llama para confirmar el menú y la disponibilidad de hoy.",call_kitchen:"Llamar al restaurante ↗",today_selection:"Selección de hoy",counter_short:"Llama o visítanos para preguntar qué hay disponible hoy.",call_counter:"Llamar al restaurante ↗",reviews_eyebrow:"NOTAS DE CLIENTES",reviews_title:"Lo que mencionan los clientes",reviews_copy:"Comentarios públicos recientes con la fuente y la fecha indicadas.",reviews_note:"El texto de las reseñas está parafraseado. Este sitio no guarda una calificación promedio.",service_note:"Comer aquí · Para llevar",menu:"Menú",call:"Llamar",call_now:"Llamar ↗",directions:"Cómo llegar ↗",directions_short:"Direcciones",hours:"Horario",daily:"Lunes — Domingo",location:"Ubicación",phone:"Teléfono",call_menu:"Llama para confirmar el menú de hoy",intro_title:"Taquería y Carnicería",intro_copy:"Comida mexicana de la cocina y una carnicería bajo un mismo techo sobre Valley Blvd.",kitchen:"Desde la cocina",menu_title:"Menú",menu_note:"Llama para confirmar el menú y la disponibilidad de hoy.",today_menu:"Menú de hoy",counter:"Desde el mostrador",counter_title:"Carnicería",counter_copy:"Una carnicería del barrio junto a la taquería. Llama o visítanos para preguntar por la selección de hoy.",ask_counter:"Pregunta en mostrador ↗",visit:"Visítanos",visit_title:"Valley Blvd., Fontana"}
 };
 let lang="en";
 const toggle=document.querySelector(".language-toggle");
@@ -41,6 +41,59 @@ async function loadPublishedMenu(){
     menuRoot.dataset.menuState="fallback";
   }
 }
+
+
+const reviewRoot=document.getElementById("reviewItems");
+let publishedReviews=null;
+
+function formatReviewDate(value){
+  const date=new Date(String(value||"")+"T12:00:00Z");
+  if(Number.isNaN(date.getTime()))return String(value||"");
+  return new Intl.DateTimeFormat(lang==="es"?"es-US":"en-US",{year:"numeric",month:"short",day:"numeric",timeZone:"UTC"}).format(date);
+}
+
+function renderPublishedReviews(){
+  if(!reviewRoot||!publishedReviews||publishedReviews._publication_status!=="PUBLISHED"||!Array.isArray(publishedReviews.items)||!publishedReviews.items.length)return;
+  const fragment=document.createDocumentFragment();
+  publishedReviews.items.slice(0,3).forEach(item=>{
+    const article=document.createElement("article");
+    article.className="review-item";
+    const text=document.createElement("p");
+    text.textContent=lang==="es"?(item.text_es||item.text_en||""):(item.text_en||item.text_es||"");
+    const meta=document.createElement("div");
+    meta.className="review-meta";
+    const reviewer=document.createElement("span");
+    reviewer.textContent=String(item.reviewer||"Customer");
+    const time=document.createElement("time");
+    time.dateTime=String(item.source_date||"");
+    time.textContent=formatReviewDate(item.source_date);
+    const source=document.createElement("a");
+    source.href=String(item.source_url||"#");
+    source.target="_blank";
+    source.rel="noreferrer";
+    source.textContent=String(item.source||"Google")+" ↗";
+    meta.append(reviewer,time,source);
+    article.append(text,meta);
+    fragment.append(article);
+  });
+  reviewRoot.replaceChildren(fragment);
+  reviewRoot.dataset.reviewState="published";
+}
+
+async function loadPublishedReviews(){
+  if(!reviewRoot)return;
+  try{
+    const response=await fetch("./content/reviews.json",{cache:"no-cache"});
+    if(!response.ok)throw new Error("reviews HTTP "+response.status);
+    const data=await response.json();
+    if(data&&data._publication_status==="PUBLISHED"&&Array.isArray(data.items)&&data.items.length){
+      publishedReviews=data;
+      renderPublishedReviews();
+    }
+  }catch(error){
+    reviewRoot.dataset.reviewState="fallback";
+  }
+}
 function renderLanguage(){
   document.documentElement.lang=lang;
   document.querySelectorAll("[data-i18n]").forEach(el=>{const v=copy[lang][el.dataset.i18n];if(v)el.innerHTML=v});
@@ -49,9 +102,11 @@ function renderLanguage(){
   toggle.setAttribute("aria-label",lang==="en"?"Cambiar a español":"Switch to English");
   if(counterTabList)counterTabList.setAttribute("aria-label",lang==="en"?"Choose Taquería or Carnicería":"Elige Taquería o Carnicería");
   renderPublishedMenu();
+  renderPublishedReviews();
 }
 toggle.addEventListener("click",()=>{lang=lang==="en"?"es":"en";renderLanguage()});
 loadPublishedMenu();
+loadPublishedReviews();
 document.getElementById("year").textContent=new Date().getFullYear();
 const hero=document.querySelector(".hero");
 if(hero){
