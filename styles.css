@@ -604,3 +604,23 @@ section[data-motion-section]::before,footer[data-motion-section]::before{content
   .review-item p{font-size:18px;line-height:1.28}
   .review-meta{font-size:8px;gap:6px 8px;margin-top:16px}
 }
+
+/* v6.12 visit hierarchy: utility first, no map/embed dependency. */
+.visit-links{align-items:center;gap:14px 24px}
+.visit-links a{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.visit-links .visit-primary{
+  border:1px solid var(--gold);
+  background:var(--gold);
+  color:var(--charcoal-deep);
+  padding:0 18px
+}
+.visit-links .visit-primary:hover,.visit-links .visit-primary:focus-visible{
+  color:var(--charcoal-deep);
+  background:var(--gold-bright);
+  border-color:var(--gold-bright)
+}
+@media(max-width:640px){
+  .visit-links{display:grid;grid-template-columns:1fr;width:min(100%,330px);margin-left:auto;margin-right:auto;gap:10px}
+  .visit-links a{width:100%;border:1px solid var(--gold-muted);padding:0 14px}
+  .visit-links .visit-primary{border-color:var(--gold)}
+}

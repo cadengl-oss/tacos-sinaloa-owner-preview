@@ -1,4 +1,4 @@
-# Tacos Sinaloa Y Carniceria — Production v6.11
+# Tacos Sinaloa Y Carniceria — Production v6.12
 
 Permanent production deployment for the audited charcoal/gold Tacos Sinaloa site.
 
@@ -68,6 +68,15 @@ https://tacos.pilotsalesdistribution.com/
 - review JSON is no-cache and covered by the production health check
 - `tools/validate-reviews.py` rejects stale/future dates, missing provenance, insecure URLs, duplicate IDs, and frozen rating metadata
 
+## Visit utility hierarchy — v6.12
+
+- Directions is the primary Visit action when no verified direct-order URL exists
+- phone number is visible directly in the Visit CTA
+- daily 8 AM–8 PM hours are repeated in the Visit summary so the location block stands on its own
+- all Visit controls meet a 44 px minimum target height
+- mobile Visit actions stack cleanly without overflow
+- no iframe map or third-party map library was added
+
 ## Verification
 
 - permanent HTTPS returns 200 through Cloudflare
@@ -95,3 +104,4 @@ https://tacos.pilotsalesdistribution.com/
 - charcoal-v6.9.1-production
 - charcoal-v6.10-production
 - charcoal-v6.11-production
+- charcoal-v6.12-production
