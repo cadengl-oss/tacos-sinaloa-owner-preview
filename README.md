@@ -75,6 +75,7 @@ https://tacos.pilotsalesdistribution.com/
 - daily 8 AM–8 PM hours are repeated in the Visit summary so the location block stands on its own
 - all Visit controls meet a 44 px minimum target height
 - mobile Visit actions stack cleanly without overflow
+- CSS and JS asset URLs are release-versioned so HTML cannot pair with stale presentation code
 - no iframe map or third-party map library was added
 
 ## Verification
