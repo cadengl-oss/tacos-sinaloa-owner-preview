@@ -1,0 +1,67 @@
+{
+  "_schema": "tacos-sinaloa-owner-content-v1",
+  "submission_id": "replace-me",
+  "status": "PENDING",
+  "submitted_at": "",
+  "notes": "",
+  "owner_approval": {
+    "approved": false,
+    "approved_at": "",
+    "approved_by": "",
+    "evidence": ""
+  },
+  "ordering": {
+    "official_url": "",
+    "owner_confirmed": false
+  },
+  "visit": {
+    "parking": "",
+    "cross_street": "",
+    "holiday_hours": "",
+    "payment_methods": [],
+    "owner_confirmed": false
+  },
+  "photos": [
+    {
+      "slot": "storefront",
+      "file": "",
+      "captured_at": "",
+      "owner_confirmed": false,
+      "current_signage_confirmed": false
+    },
+    {
+      "slot": "interior",
+      "file": "",
+      "captured_at": "",
+      "owner_confirmed": false
+    },
+    {
+      "slot": "carniceria",
+      "file": "",
+      "captured_at": "",
+      "owner_confirmed": false
+    },
+    {
+      "slot": "taco_hero",
+      "file": "",
+      "captured_at": "",
+      "owner_confirmed": false
+    },
+    {
+      "slot": "birria_hero",
+      "file": "",
+      "captured_at": "",
+      "owner_confirmed": false
+    },
+    {
+      "slot": "atmosphere",
+      "file": "",
+      "captured_at": "",
+      "owner_confirmed": false
+    }
+  ],
+  "menu": {
+    "owner_confirmed": false,
+    "categories": []
+  }
+}

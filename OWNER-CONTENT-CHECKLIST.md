@@ -11,7 +11,7 @@ Provide six current originals, ideally captured in the same lighting session:
 5. Birria / quesabirria hero
 6. Atmosphere or action shot
 
-The current storefront image is archival and remains labeled "Prior signage" until replaced.
+The archival storefront image is retained only as a source asset and is no longer displayed in the customer-facing gallery. A current storefront image should not be published until current signage is owner-confirmed.
 
 ## Menu
 Provide the current in-store menu or approve a photographed menu board. For every item to publish, confirm:
@@ -45,3 +45,15 @@ Still owner-confirm before publishing:
 - cross street
 - holiday hours
 - accepted payment methods
+
+## Safe intake workflow
+1. Start from `content/owner-intake/submission.template.json`.
+2. Keep the working submission, approval evidence, and uploaded originals outside Git.
+3. Run `tools/validate-owner-submission.py` in review mode while content is incomplete.
+4. After explicit owner approval, set status to `APPROVED` and record approval date, approver, and evidence reference.
+5. Run the validator with `--strict-publish` and the private photo assets directory.
+6. Run `tools/stage-owner-content.py` to create a private optimized/public-safe bundle outside the repository.
+7. Build and inspect a site preview from that bundle.
+8. Run the standard `tools/release-check.sh` before any production cutover.
+
+Actual approval evidence must never be copied into the public web root.

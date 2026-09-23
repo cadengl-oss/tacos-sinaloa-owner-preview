@@ -1,6 +1,7 @@
 {
-  "_status": "OWNER_APPROVAL_REQUIRED",
-  "_instructions": "Replace examples only with owner-approved current menu data before wiring this file to production.",
+  "_status": "LEGACY_TEMPLATE",
+  "_superseded_by": "content/owner-intake/submission.template.json",
+  "_instructions": "Legacy menu-only template retained for reference. New owner content should use the unified owner-intake submission template.",
   "categories": [
     {
       "id": "category-id",
