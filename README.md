@@ -138,3 +138,13 @@ The staging tool does not modify production or the repository. A staged bundle s
 - charcoal-v6.11-production
 - charcoal-v6.12-production
 - charcoal-v6.13-production
+
+## Permanent staging previews
+
+Client/release candidates are previewed at `https://staging-tacos.pilotsalesdistribution.com` before production promotion.
+
+- Staging is a separate Nexus service (`tacos-sinaloa-staging.service`) on loopback port `4189`; production remains on `4188`.
+- The Cloudflare tunnel routes the staging hostname independently from `tacos.pilotsalesdistribution.com`.
+- Staging responses carry `X-Robots-Tag: noindex, nofollow, noarchive` and `X-PSE-Environment: staging` so previews are not intended for indexing.
+- Commit a candidate first, then run `tools/deploy-staging.sh` from Forge. The deployer snapshots the prior staging tree, publishes the committed tree only, restarts staging, and verifies both local and public health plus staging headers.
+- Production deployment remains a separate explicit promotion step; staging deployment never writes `/srv/pse/tacos-sinaloa` or restarts `tacos-sinaloa.service`.
