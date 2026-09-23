@@ -78,6 +78,25 @@ https://tacos.pilotsalesdistribution.com/
 - CSS and JS asset URLs are release-versioned so HTML cannot pair with stale presentation code
 - no iframe map or third-party map library was added
 
+## Release safety harness — v6.13
+
+Future menu, review, photo, copy, CSS and JS changes should pass the local release harness before production freeze. No new npm or Python packages are required.
+
+- `tools/release-config.env` is the release-audit expectation file; bump release and asset tokens intentionally with each production release.
+- `tools/release-check.sh` runs content validators, static checks, endpoint/header checks, live Chromium checks at 390/768/1440, bilingual behavior, tab behavior, JSON fallback behavior, minimum Visit tap targets, broken-image detection and visual regression.
+- `tools/release-audit.cjs` creates deterministic full-page browser captures and `audit.json`.
+- `tools/accept-visual-baseline.sh` accepts an intentional production visual baseline under `/home/president/Work/tacos-sinaloa-visual-baselines/`.
+- `tools/visual-regression.sh` compares mobile/tablet/desktop captures with a default maximum changed-pixel ratio of 1%.
+- Transient `audit-output/` artifacts are excluded from Git.
+
+Normal certification command:
+
+```bash
+./tools/release-check.sh
+```
+
+A changed visual is not automatically accepted. Inspect it first; only then run the baseline acceptance script for the new production release.
+
 ## Verification
 
 - permanent HTTPS returns 200 through Cloudflare
@@ -106,3 +125,4 @@ https://tacos.pilotsalesdistribution.com/
 - charcoal-v6.10-production
 - charcoal-v6.11-production
 - charcoal-v6.12-production
+- charcoal-v6.13-production
