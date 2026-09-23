@@ -9,7 +9,7 @@ TARGET="$BASELINE_ROOT/$RELEASE"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
-BASE_URL="${BASE_URL:-https://tacos.pilotsalesdistribution.com}" EXPECTED_RELEASE="${EXPECTED_RELEASE:-v6.13}" AUDIT_OUT="$TMP" node "$ROOT/tools/release-audit.cjs"
+BASE_URL="${BASE_URL:-https://tacos.pilotsalesdistribution.com}" EXPECTED_RELEASE="${EXPECTED_RELEASE}" EXPECTED_ASSET_TOKEN="${EXPECTED_ASSET_TOKEN}" AUDIT_OUT="$TMP" node "$ROOT/tools/release-audit.cjs"
 
 mkdir -p "$TARGET"
 for name in mobile.png tablet.png desktop.png audit.json; do

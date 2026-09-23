@@ -42,7 +42,7 @@ class Handler(SimpleHTTPRequestHandler):
         return json.dumps({
             "status": "ok",
             "service": "tacos-sinaloa",
-            "release": "v6.13"
+            "release": "v6.14-preview"
         }, separators=(",", ":")).encode("utf-8")
 
     def _send_health(self, include_body=True):
