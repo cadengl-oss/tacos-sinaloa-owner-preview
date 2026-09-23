@@ -624,3 +624,6 @@ section[data-motion-section]::before,footer[data-motion-section]::before{content
   .visit-links a{width:100%;border:1px solid var(--gold-muted);padding:0 14px}
   .visit-links .visit-primary{border-color:var(--gold)}
 }
+
+/* v6.13 truth-first gallery: do not feature archival storefront signage as current proof. */
+.place-card-main img{object-position:center 52%}
